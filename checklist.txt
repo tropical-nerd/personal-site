@@ -1,0 +1,7 @@
+[ ] Remove slugs from navItems, use slug filter instead
+[ ] Add created-date to projects
+[ ] Change brand color to match resume
+[ ] Add projects with actual interactive js
+[ ] Change menu structure to Websites, Projects, Blog
+[ ] Add sass processing for additional stylesheets
+
