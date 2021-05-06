@@ -1,0 +1,22 @@
+---
+title: Projects
+slug: projects
+layout: layouts/base.njk
+permalink: /projects/
+coverImageClass: postlist-cover
+templateClass: template-postlist
+tags: top
+order: 2
+eleventyNavigation:
+  key: projects
+  title: Projects
+  order: 2
+---
+<div class="post-heading">
+  <h1>{{ title }}</h1>
+  <p>The following are posts detailing personal web projects.</p>
+</div>
+
+{% set postlist = (collections.projects | sortByOrder(true)) %}
+{% include "postlist.njk" %}
+

@@ -1,0 +1,33 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    line-height: 1.5
+}
+
+body, p, ul, li, h1, h2, h3, h4, h5, h6, blockquote, figure, dl, dd {
+    margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    line-height: 1;
+}
+
+nav {
+    ol, ul {
+        padding: 0;
+        list-style: none;
+    }
+}
+
+img, iframe, picture, video, canvas {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+svg {
+    overflow: visible;
+}
+

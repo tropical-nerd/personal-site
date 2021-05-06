@@ -1,0 +1,338 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Charles Robertson :: Tetras</title>
+    <meta name="description" content="The geometry behind Tetras, a generative tetrahedral landscape proliferated with chromatic radiation.">
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="/style.css">
+    
+    
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png">
+    <link rel="manifest" href="/favicons/site.webmanifest">
+    <link rel="mask-icon" href="/favicons/safari-pinned-tab.svg" color="#36ffb4">
+    <link rel="shortcut icon" href="/favicons/favicon.ico">
+    <meta name="msapplication-TileColor" content="#36ffb4">
+    <meta name="msapplication-config" content="/favicons/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff"><!-- Twitter Card -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@tropical_nerd" />
+    <meta name="twitter:title" content="Charles Robertson :: Tetras" />
+    <meta name="twitter:description" content="The geometry behind Tetras, a generative tetrahedral landscape proliferated with chromatic radiation." />
+    <meta name="twitter:image" content="https://charlesrobertson.io//images/tetras_cover_1600.jpg" />
+    <meta name="twitter:image:alt" content="An SVG animation of a geometric landscape with blue fields of color radiating from it" /><!-- Scripts --><script src="/js/selectvid.js" defer></script><script src="/js/looper.js" defer></script></head>
+  <body id="page-top" class="no-js">
+    
+    <svg style="display:none">
+      <symbol id="icon-cocohost" viewbox="0 0 16 16" style="overflow: visible;">
+        <path d="M9.78 4.135c2.635 1.522 4.233 3.691 3.567 4.845-.666 1.153-3.343.854-5.98-.668C4.733 6.79 3.136 4.622 3.8 3.468c.666-1.153 3.343-.855 5.98.667z"/><path d="M4.288 13.649A8.574 8.574 0 0016 10.51c-1.036 1.794-5.201 1.329-9.302-1.039C2.645 7.132.171 3.81 1.114 2a8.574 8.574 0 003.174 11.649z"/>
+      </symbol>
+      <symbol id="icon-codepen" viewbox="0 0 16 16" style="overflow: visible;">
+        <path d="M8.526.543a1.264 1.264 0 00-1.42.017L.75 4.988a1.263 1.263 0 00-.54 1.037v4.77a1.262 1.262 0 00.567 1.055l6.46 4.274a1.262 1.262 0 001.393 0l6.59-4.354a1.265 1.265 0 00.57-1.057V6.025a1.263 1.263 0 00-.57-1.05L8.526.543zm4.922 5.168l-2.436 1.635L8.73 5.685l-.015-3.267 4.734 3.293zM7.061 2.42v3.197L4.724 7.255 2.386 5.69 7.061 2.42zM1.747 7.265l1.51 1.013-1.51 1.057v-2.07zM7.1 14.082L2.387 10.92l2.355-1.645 2.36 1.582v3.225zm-.895-5.83l1.527-1.068L9.51 8.353 7.938 9.41 6.206 8.25zm2.56 5.83v-3.226l2.255-1.51 2.427 1.595-4.681 3.14zm5.355-4.692l-1.6-1.052 1.6-1.074V9.39z"/>
+      </symbol>
+      <symbol id="icon-github" viewbox="0 0 16 16" style="overflow: visible;">
+        <path d="M8.002 0a8 8 0 00-2.53 15.59c.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82a7.542 7.542 0 014 0c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.005 8.005 0 008.002 0z"/>
+      </symbol>
+      <symbol id="icon-twitter" viewbox="0 0 16 16" style="overflow: visible;">
+        <path d="M5.02 14.833c6.042 0 9.345-5.002 9.345-9.338 0-.143 0-.286-.007-.422A6.726 6.726 0 0016 3.37a6.67 6.67 0 01-1.887.518 3.28 3.28 0 001.444-1.818c-.645.381-1.35.65-2.084.797a3.287 3.287 0 00-5.68 2.246c-.003.252.027.504.088.748a9.323 9.323 0 01-6.77-3.43 3.279 3.279 0 001.021 4.376A3.228 3.228 0 01.647 6.4v.04a3.284 3.284 0 002.636 3.22 3.276 3.276 0 01-1.485.055 3.277 3.277 0 003.065 2.28A6.606 6.606 0 010 13.349a9.155 9.155 0 005.02 1.484z"/>
+      </symbol>
+      <symbol id="icon-email" viewbox="0 0 16 16" style="overflow: visible;">
+        <path d="M8 10.78c.52 0 1.028-.16 1.459-.458L16 5.827v7.436c0 .328-.128.642-.354.873a1.196 1.196 0 01-.852.364H1.206a1.196 1.196 0 01-.852-.364A1.256 1.256 0 010 13.264V5.827l6.541 4.495c.431.298.94.457 1.459.457z"/>
+        <path d="M8 9.386c-.25 0-.495-.077-.703-.22L0 4.151V2.737c0-.328.128-.642.354-.874.226-.231.532-.362.852-.363h13.588c.32.001.626.132.852.363.226.232.353.546.354.874V4.15L8.703 9.165c-.208.144-.453.22-.703.22z"/>
+      </symbol>
+      <symbol id="icon-close" viewBox="0 0 32 32" style="overflow: visible;">
+        <path d="M0, 0 L32, 32 M32, 0 L0, 32"></path>
+      </symbol>
+      <symbol id="icon-play" viewBox="0 0 24 20" style="overflow: visible;">
+        <path d="M4 0L24 10L4 20V0z"/>
+      </symbol>
+      <symbol id="icon-pause" viewBox="0 0 24 20" style="overflow: visible;">
+        <rect width="7" height="20" x="2"/>
+        <rect width="7" height="20" x="15"/>
+      </symbol>
+    </svg>
+    
+    <header class="header">
+      
+      <a class="header-logo" href="/" title="Home">
+        
+              Charles Robertson
+            </a>
+      <nav class="header-nav">
+        <ul class="header-nav-list">
+          
+            <li class="header-nav-item">
+              <a href="/work/">
+                <div class="header-nav-item-inner">
+                  Work
+                </div>
+              </a>
+            </li>
+          
+            <li class="header-nav-item current">
+              <a href="/projects/">
+                <div class="header-nav-item-inner">
+                  Projects
+                </div>
+              </a>
+            </li>
+          
+            <li class="header-nav-item">
+              <a href="/resume/">
+                <div class="header-nav-item-inner">
+                  Resume
+                </div>
+              </a>
+            </li>
+          
+        </ul>
+      </nav>
+      
+    </header>
+
+    <main  class="template-post">
+      
+
+<div class="post-heading">
+  <h1>Tetras</h1>
+  
+    <a href="https://cocohost.co/tetras">cocohost.co/tetras</a>
+  
+</div>
+
+<figure class="looper">
+      <div class="looper-video">
+        <video src="/videos/tetras_960.mp4" width="960" height="640" loop autoplay playsinline muted controls>
+          <source src="/videos/tetras_384.mp4" type="video/mp4" data-width="384">
+<source src="/videos/tetras_480.mp4" type="video/mp4" data-width="480">
+<source src="/videos/tetras_768.mp4" type="video/mp4" data-width="768">
+<source src="/videos/tetras_960.mp4" type="video/mp4" data-width="960">
+          Sorry, your browser doesn't support embedded videos.
+        </video>
+        <button class="looper-toggle" title="Pause" tabindex="-1" style="display: none;">
+            <svg width="25" height="20" role="img" aria-labelledby="pause-title" focusable="false">
+                <title id="pause-title">Pause</title>
+                <use xlink:href="#icon-pause"></use>
+            </svg>
+        </button>
+      </div>
+<figcaption class="looper-caption">A generative tetrahedral landscape proliferated with chromatic radiation.</figcaption>
+    </figure>
+<p>This is a recreation of a design I made while taking Color and Design at the New Orleans Academy of Fine Arts. The original I drew with a ruler and compass and illustrated with gouache. To create the scene in SVG I followed more or less the same steps as I did sketching it by hand, just with a lot more attention paid to numerical coordinates.</p>
+<figure class="diagram">
+    <svg width="480" height="297" style="max-width:30rem" aria-describedby="tile-plane-desc" aria-labelledby="tile-plane-title" role="img" viewBox="0 0 480 297">
+ <title id="tile-plane-title">Tile plane diagram</title>
+ <desc id="tile-plane-desc">Diagram showing the coordinate system and the relationship between the tile plane and the viewport</desc>
+ <defs>
+  <clipPath id="tile-plane-clip-a">
+   <path d="m67.206 36.326h351.47v202.61h-351.47z"/>
+  </clipPath>
+  <clipPath id="tile-plane-clip-b">
+   <path d="m3.8106-2.7709v278.17h479.57v-278.17zm63.396 39.097h351.47v202.61h-351.47z"/>
+  </clipPath>
+ </defs>
+ <g clip-path="url(#tile-plane-clip-b)">
+  <path d="m55.272 4.1286-46.862 26.612 46.862 26.612v0.0015l-46.862 26.612 46.862 26.612-46.862 26.612 46.862 26.612-46.862 26.612 46.862 26.612-46.862 26.612 46.862 26.612 46.862-26.612 46.862 26.612 46.862-26.612 46.862 26.612 46.862-26.612 46.862 26.612 46.862-26.612 46.862 26.612 46.862-26.612-46.862-26.612 46.862-26.612-46.862-26.612 46.862-26.612-46.862-26.612 46.862-26.612-46.862-26.612 46.862-26.612-46.862-26.612-46.862 26.612-46.862-26.612-46.862 26.612-46.862-26.612-46.862 26.612-46.862-26.612-46.862 26.612-46.862-26.612" fill="var(--color-base)" fill-opacity=".25"/>
+  <g fill="none" stroke="currentColor" stroke-dasharray="6, 2" stroke-width="1.5">
+   <path d="m148.78 217.9-46.862 26.612 46.862 26.612 46.862-26.612-46.862-26.612"/>
+   <path d="m242.94 217.9-46.862 26.612 46.862 26.612 46.862-26.612-46.862-26.612"/>
+   <path d="m337.1 217.9-46.862 26.612 46.862 26.612 46.862-26.612-46.862-26.612m-281.39-53.334-46.862 26.612 46.862 26.612 46.862-26.612-46.862-26.612"/>
+   <path d="m55.272 217.9-46.862 26.612 46.862 26.612 46.862-26.612-46.862-26.612m375.56 0-46.862 26.612 46.862 26.612 46.862-26.612-46.862-26.612"/>
+   <path d="m430.17 164.24-46.862 26.612 46.862 26.612 46.862-26.612-46.862-26.612m0-53.334-46.862 26.612 46.862 26.612 46.862-26.612-46.862-26.612"/>
+   <path d="m430.17 57.463-46.862 26.612 46.862 26.612 46.862-26.612-46.862-26.612m-375.56 0-46.862 26.612 46.862 26.612 46.862-26.612-46.862-26.612"/>
+   <path d="m55.272 110.58-46.862 26.612 46.862 26.612 46.862-26.612-46.862-26.612m0-106.67-46.862 26.612 46.862 26.612 46.862-26.612-46.862-26.612m93.834 0-46.862 26.612 46.862 26.612 46.862-26.612-46.862-26.612"/>
+   <path d="m242.94 4.1286-46.862 26.612 46.862 26.612 46.862-26.612-46.862-26.612"/>
+   <path d="m337.1 4.1286-46.862 26.612 46.862 26.612 46.862-26.612-46.862-26.612m93.834 7.448e-4 -46.862 26.612 46.862 26.612 46.862-26.612-46.862-26.612"/>
+  </g>
+ </g>
+ <path d="m420 275 12-30.4m-104 31.2v-37.1" fill="none" stroke="currentColor"/>
+ <g class="body-font" font-size="14px">
+  <text x="417.12827" y="291.6434" font-size="14px" text-anchor="middle">tile plane</text>
+  <text x="327.539" y="291.6434" font-size="14px" text-anchor="middle">viewport</text>
+ </g>
+ <g clip-path="url(#tile-plane-clip-a)">
+  <path d="m55.272 4.1286-46.862 26.612 46.862 26.612v0.0015l-46.862 26.612 46.862 26.612-46.862 26.612 46.862 26.612-46.862 26.612 46.862 26.612-46.862 26.612 46.862 26.612 46.862-26.612 46.862 26.612 46.862-26.612 46.862 26.612 46.862-26.612 46.862 26.612 46.862-26.612 46.862 26.612 46.862-26.612-46.862-26.612 46.862-26.612-46.862-26.612 46.862-26.612-46.862-26.612 46.862-26.612-46.862-26.612 46.862-26.612-46.862-26.612-46.862 26.612-46.862-26.612-46.862 26.612-46.862-26.612-46.862 26.612-46.862-26.612-46.862 26.612-46.862-26.612" fill="var(--color-base)" fill-opacity=".5"/>
+  <g fill="none" stroke="currentColor" stroke-width="1.5px">
+    <path d="m149.11 3.9096-141.35 80.166 329.35 187.05 139.93-80.275z"/>
+    <path d="m8.4093 30.522 46.862-26.612 422.42 240.61-46.862 26.612z" />
+    <path d="m8.4093 137.19 234.53-133.06 234.09 133.39-234.09 133.61z" />
+    <path d="m148.78 271.13-140.04-79.947 328.37-187.05 139.93 79.947z" />
+    <path d="m477.8 30.742-422.53 240.39-46.862-26.612 422.53-240.39z" />
+  </g>
+ </g>
+ <path d="m67.206 36.326v202.61h351.47v-202.61z" fill="none" stroke="currentColor" stroke-width="2"/>
+</svg>
+</figure>
+<p>The first step was to create a map of rhombus-shaped tiles to serve as a coordinate system for placing the tetrahedral mountains (I'll be referring to them as &quot;tetras&quot; for short). The number of columns and rows are calculated so that the map is always slightly larger than the viewport.</p>
+<figure class="diagram">
+    <svg width="280" height="300" style="max-width: 17.5rem" aria-describedby="tetra-desc" aria-labelledby="tetra-title" role="img" viewBox="0 0 280 300">
+ <title id="tetra-id">Tetra diagram</title>
+ <desc id="tetra-desc">Diagram of a single tetra showing its construction using two faces connected to a tile.</desc>
+ <defs>
+  <marker id="g" overflow="visible" orient="auto">
+   <path d="m0.98 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0z" fill="currentColor" stroke="currentColor" stroke-width="1pt" />
+  </marker>
+ </defs>
+ <g stroke="currentColor">
+  <g fill="none" stroke-dasharray="6, 2" stroke-width="1.5">
+   <path d="m8.83 227s164-93.2 164-93.2m-63.5 161 164-93.2m-100 93.2s-164-93.2-164-93.2m264 25.6s-164-93.2-164-93.2"/>
+  </g>
+  <path d="m135 9.92-10.1 187s15.8 79.5 15.8 79.5l110-62.4-64.2-138s-51.1-66.4-51.1-66.4" fill="var(--color-base)" fill-opacity=".25" marker-mid="url(#g)" stroke-linejoin="round" stroke-width="2"/>
+  <path d="m141 276-110-62.4 90-136s13.9-68 13.9-68l-10.1 187 15.8 79.5" fill="var(--color-base)" fill-opacity=".5" marker-mid="url(#g)" stroke-linejoin="round" stroke-width="2"/>
+ </g>
+ <g class="body-font" font-size="14px" text-anchor="middle">
+  <text x="139.56776" y="294.88818"><tspan x="139.56776" y="294.88818">b</tspan></text>
+  <text x="12.15195" y="217.6505"><tspan x="12.15195" y="217.6505">a</tspan></text>
+  <text x="271.11697" y="218.47447"><tspan x="271.11697" y="218.47447">c</tspan></text>
+  <text x="106.16454" y="82.521492"><tspan x="106.16454" y="82.521492">d</tspan></text>
+  <text x="114.57127" y="200.81673"><tspan x="114.57127" y="200.81673">e</tspan></text>
+  <text x="196.30801" y="80.793098"><tspan x="196.30801" y="80.793098">f</tspan></text>
+  <text x="122.14118" y="3.332345"><tspan x="122.14118" y="13.332345">g</tspan></text>
+ </g>
+</svg>
+</figure>
+<p>The tetras themselves are generated as two polygons that share a side. They increase in height towards the top of the viewport and decrease in contrast to create a sense of depth through atmospheric perspective.</p>
+<figure class="diagram">
+    <svg width="480" height="280" viewBox="0 0 480 280" style="max-width: 30rem; overflow: hidden;" aria-labelledby="ellipse-title" aria-describedby="ellipse-desc" role="img">
+    <title id="ellipse-title">Ellipse diagram</title>
+    <desc id="ellipse-desc">Diagram of an ellipse constructed from the arcs of four circles</desc>
+ <defs>
+  <marker id="a" overflow="visible" orient="auto">
+   <path d="m0.98 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0z" fill="currentColor" stroke="currentColor" stroke-width="1"/>
+  </marker>
+ </defs>
+ <path d="m122.85 208.46a78.505 78.498 0 0 1 0-135.96 235.52 235.49 0 0 1 235.52 0 78.505 78.498 0 0 1 0 135.96 235.52 235.49 0 0 1-235.52 0z" fill="var(--color-base)" fill-opacity=".5" marker-mid="url(#a)" marker-start="url(#a)" stroke="currentColor" stroke-width="2"/>
+ <g class="body-font" font-size="14px" text-anchor="middle">
+  <text x="112.09374" y="66.606651"><tspan x="112.09374" y="66.606651">a</tspan></text>
+  <text x="111.65013" y="220.71445"><tspan x="111.65013" y="220.71445">b</tspan></text>
+  <text x="369.54214" y="220.75954"><tspan x="369.54214" y="220.75954">c</tspan></text>
+  <text x="369.72263" y="66.606651"><tspan x="369.72263" y="66.606651">d</tspan></text>
+ </g>
+ <g fill="none" stroke="currentColor">
+  <g stroke-linejoin="round" stroke-dasharray="6, 2" stroke-width="1.5">
+   <ellipse cx="240.61" cy="4.2208" rx="235.82" ry="235.82" />
+   <ellipse cx="240.61" cy="276.26" rx="235.82" ry="235.2"/>
+   <ellipse cx="319.133" cy="140.48" rx="78.531" ry="78.531"/>
+   <ellipse cx="162.130" cy="140.48" rx="78.531" ry="78.531"/>
+  </g>
+  <g stroke-dasharray="3, 2" stroke-width="1.5">
+   <path d="m240.61 276.67-118.16-68.1-118.16-68.093 236.32-136.19 236.32 136.19-118.16 68.093z"/>
+   <path d="m122.85 72.495 117.76 204.17 117.76-204.17"/>
+   <path d="m122.85 208.46 117.76-204.17 117.76 204.17"/>
+  </g>
+ </g>
+</svg>
+</figure>
+<p>In the original compass-drawn design, the ellipses were approximated using a construction of circular arcs. After trying and failing to recreate this by adding and intersecting circles, I referred to the SVG documentation. It turns out SVG has a path syntax specifically for describing curves as a series of elliptical arcs, which was the perfect tool for the job.</p>
+<figure class="diagram">
+    <svg viewBox="0 0 380 300" width="380" height="300" style="max-width: 23.75rem" aria-labelledby="radiation-title" aria-describedby="radiation-desc" role="img">
+ <title id="radiation-title">Radiation</title>
+ <desc id="radiation-desc">Diagram of radiation bands emminating from epicenter</desc>
+ <defs>
+  <marker id="TriangleOutM" overflow="visible" orient="auto">
+   <path d="m5.77 0-8.65 5v-10z" fill="currentColor"/>
+  </marker>
+ </defs>
+ <g fill="none" stroke="currentColor" stroke-dasharray="6, 2" stroke-width="1.5">
+  <path d="m169.09 251.49 61.081 35.199"/>
+  <path d="m169.09 286.69 61.081-35.201"/>
+  <path d="m151.16 261.83 61.081 35.199"/>
+  <path d="m187.04 241.1 61.081 35.199"/>
+  <path d="m212.24 241.16-61.081 35.199"/>
+  <path d="m248.22 261.8-61.081 35.199"/>
+ </g>
+ <circle cx="199.69" cy="269.09" r="2.759" fill="currentColor" />
+ <g fill="var(--color-base)" fill-opacity=".25" stroke="currentColor" stroke-width="2">
+  <path d="m181.65 255.65a12.024 11.907 0 0 1 0-20.624 36.073 35.722 0 0 1 36.073 0 12.024 11.907 0 0 1 0 20.624 36.073 35.722 0 0 1-36.073 0z"/>
+  <path d="m155.46 243.95a29.486 29.442 0 0 1 0-50.994 88.463 88.329 0 0 1 88.463 0 29.486 29.442 0 0 1 0 50.994 88.463 88.329 0 0 1-88.463 0z"/>
+  <path d="m122.7 227.37a51.327 51.396 0 0 1 0-89.02 153.98 154.19 0 0 1 153.98 0 51.327 51.396 0 0 1 0 89.02 153.98 154.19 0 0 1-153.98 0z"/>
+  <path d="m93.604 209.53a70.722 70.899 0 0 1 0-122.8 212.18 212.7 0 0 1 212.18 0 70.722 70.899 0 0 1 0 122.8 212.18 212.7 0 0 1-212.18 0z"/>
+  <path d="m68.389 191.23a87.531 87.807 0 0 1 0-152.08 262.6 263.43 0 0 1 262.6 0 87.531 87.807 0 0 1 0 152.08 262.6 263.43 0 0 1-262.6 0z"/>
+ </g>
+ <path d="m15.697 116.84h-10.384v152.52h176.69" fill="none" marker-end="url(#TriangleOutM)" stroke="currentColor" stroke-width="2"/>
+ <text x="260.79175" y="273.71179" fill="currentColor" class="body-font">epicenter</text>
+ <path d="m206.93 268.99h48.539" fill="none" stroke="currentColor" stroke-width="1px"/>
+</svg>
+</figure>
+<p>These pseudo-ellipses then become bands in a radiation field. The epicenter is chosen from a random intersection at the corner of four tetras. One band radiates out every two seconds. It expands until it reaches a maximum size and then it returns to the bottom of the stack to radiate all over again.</p>
+<h2>Lessons Learned</h2>
+<p>Snap.svg is an amazing library for creating generative and interactive vector graphics for the web. It greatly simplified the process of creating this design and I feel like I barely scratched the surface of what it can do.</p>
+<p>Snap.svg animates using JavaScript, which is great and fine for many use cases, really any situation that doesn't demand GPU acceleration. In this case, because the ellipses grow so large, on larger screens I see some performance issues, and it makes the fan on my laptop kick into high gear in Firefox. If one was inclined they could rebuild this in a way that uses CSS or canvas animation which both natively take advantage of hardware acceleration.</p>
+
+
+
+    </main><div class="post-nav">
+  
+  
+    
+  
+
+  
+    
+      
+    
+    
+    <div class="post-nav-prev">← <a href="/projects/fun-with-arrays/">Fun with Arrays</a></div>
+  
+
+  <div class="post-nav-top"><a href="#page-top">Back to top</a> ↑</div>
+
+  
+    
+      
+    
+
+    <div class="post-nav-next"><a href="/projects/isosphere/">Isosphere</a> →</div>
+  
+
+</div><footer class="footer">
+  <div class="footer-container">
+    <nav class="footer-nav">
+      <div class="footer-menu">
+        <h3 class="footer-heading">Site</h3>
+          <ul class="footer-nav-list">
+          <li><a href='/'>Home</a></li>
+          <li><a href="/work">Work</a></li>
+          <li><a href="/projects">Projects</a></li>
+          <li><a href="/resume">Resume</a></li>
+        </ul>
+      </div>
+      <div class="footer-menu">
+        <h3 class="footer-heading">Contact</h3>
+        <ul class="footer-nav-list">
+          <li><a href='&#109;ailt&#111;&#58;&#99;on&#116;&#97;c&#37;74&#64;%63&#37;68&#97;&#114;%6C%65&#37;&#55;3rob&#101;rt&#115;on%2Eio'><svg class="icon" role="presentation" focusable="false" width="16" height="16" fill="currentColor">
+      <use xlink:href="#icon-email" />
+    </svg>Email</a></li>
+          <li><a href="https://twitter.com/tropical_nerd"><svg class="icon" role="presentation" focusable="false" width="16" height="16" fill="currentColor">
+      <use xlink:href="#icon-twitter" />
+    </svg>Twitter</a></li>
+        </ul>
+      </div>
+      <div class="footer-menu">
+        <h3 class="footer-heading">Elsewhere</h3>
+          <ul class="footer-nav-list">
+          <li><a href="https://github.com/tr0pical1nternet"><svg class="icon" role="presentation" focusable="false" width="16" height="16" fill="currentColor">
+      <use xlink:href="#icon-github" />
+    </svg>Github</a></li>
+          <li><a href="https://codepen.io/tr0pical1nternet"><svg class="icon" role="presentation" focusable="false" width="16" height="16" fill="currentColor">
+      <use xlink:href="#icon-codepen" />
+    </svg>Codepen</a></li>
+          <li><a href="https://cocohost.co"><svg class="icon" role="presentation" focusable="false" width="16" height="16" fill="currentColor">
+      <use xlink:href="#icon-cocohost" />
+    </svg>Cocohost</a></li>
+        </ul>
+      </div>
+    </nav>
+    <div class="footer-contentinfo">
+      &copy;2019 Charles Robertson
+    </div>
+    <div class="footer-decoration" role="presentation"></div>
+  </div>
+</footer><script defer>
+      document.querySelector('body').classList.remove('no-js');
+    </script>
+  </body>
+</html>

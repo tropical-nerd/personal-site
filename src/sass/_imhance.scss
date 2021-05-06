@@ -1,0 +1,51 @@
+.imhance {
+    // position: relative;
+    &-media {
+        @include button-shadow;
+    }
+
+    &-close {
+        --button-width: calc(1rem + 6vmin);
+        --outline-offset: calc(1px + var(--button-width) / 32);
+        display: none;
+        position: fixed;
+        left: calc(50% - calc(var(--button-width) / 2));
+        width: var(--button-width);
+        padding: calc(var(--button-width) / 3.5);
+        border: calc(1px + (var(--button-width) / 32)) solid var(--color-text);
+        border-radius: 50%;
+        box-shadow: calc(var(--button-width) / 12) calc(var(--button-width) / 12) 0 var(--color-shadow);
+        transition: opacity var(--duration) linear;
+        opacity: 0;
+        z-index: 2;
+
+        svg {
+            stroke-width: 8pt;
+            stroke-linecap: round;
+        }
+
+        &:focus {
+            // outline: calc(var(--button-width) / 8) solid var(--color-focus);
+            -moz-outline-radius: 75%;
+        }
+    }
+
+    &-click-plate {
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        transition: opacity var(--duration) linear;
+        background-color: var(--color-background);
+        opacity: 0;
+        z-index: 1;
+    }
+
+    &-caption {
+        font-size: $font-size-small;
+        text-align: center;
+        margin-top: var(--s-3);
+    }
+    
+}

@@ -1,0 +1,25 @@
+<svg width="280" height="300" style="max-width: 17.5rem" aria-describedby="tetra-desc" aria-labelledby="tetra-title" role="img" viewBox="0 0 280 300">
+ <title id="tetra-id">Tetra diagram</title>
+ <desc id="tetra-desc">Diagram of a single tetra showing its construction using two faces connected to a tile.</desc>
+ <defs>
+  <marker id="g" overflow="visible" orient="auto">
+   <path d="m0.98 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0z" fill="currentColor" stroke="currentColor" stroke-width="1pt" />
+  </marker>
+ </defs>
+ <g stroke="currentColor">
+  <g fill="none" stroke-dasharray="6, 2" stroke-width="1.5">
+   <path d="m8.83 227s164-93.2 164-93.2m-63.5 161 164-93.2m-100 93.2s-164-93.2-164-93.2m264 25.6s-164-93.2-164-93.2"/>
+  </g>
+  <path d="m135 9.92-10.1 187s15.8 79.5 15.8 79.5l110-62.4-64.2-138s-51.1-66.4-51.1-66.4" fill="var(--color-base)" fill-opacity=".25" marker-mid="url(#g)" stroke-linejoin="round" stroke-width="2"/>
+  <path d="m141 276-110-62.4 90-136s13.9-68 13.9-68l-10.1 187 15.8 79.5" fill="var(--color-base)" fill-opacity=".5" marker-mid="url(#g)" stroke-linejoin="round" stroke-width="2"/>
+ </g>
+ <g class="body-font" font-size="14px" text-anchor="middle">
+  <text x="139.56776" y="294.88818"><tspan x="139.56776" y="294.88818">b</tspan></text>
+  <text x="12.15195" y="217.6505"><tspan x="12.15195" y="217.6505">a</tspan></text>
+  <text x="271.11697" y="218.47447"><tspan x="271.11697" y="218.47447">c</tspan></text>
+  <text x="106.16454" y="82.521492"><tspan x="106.16454" y="82.521492">d</tspan></text>
+  <text x="114.57127" y="200.81673"><tspan x="114.57127" y="200.81673">e</tspan></text>
+  <text x="196.30801" y="80.793098"><tspan x="196.30801" y="80.793098">f</tspan></text>
+  <text x="122.14118" y="3.332345"><tspan x="122.14118" y="13.332345">g</tspan></text>
+ </g>
+</svg>

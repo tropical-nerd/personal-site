@@ -1,0 +1,212 @@
+.media {
+    // box-sizing: content-box;
+    display: block;
+    background-color: var(--color-text);
+    border-radius: var(--border-radius);
+    border: var(--border-width) solid var(--color-text);
+    overflow: hidden;
+
+    &:focus {
+        -moz-outline-radius: var(--outline-radius);
+    }
+}
+
+.video {
+    @extend .media;
+    box-sizing: content-box;
+    width: 100%;
+    max-width: 24rem;
+    height: auto;
+    margin: var(--s2) auto;
+}
+
+.post-figure {
+    width: 14rem;
+    display: block;
+    margin: var(--s2) auto;
+
+    img {
+        @extend .media;
+        // @include button-shadow;
+    }
+
+    &-left {
+        @media screen and (min-width: 700px) {
+            float: left;
+            margin-top: var(--s-3); 
+            margin-right: var(--s2);
+        }
+    }
+
+    &-right {
+        @media screen and (min-width: 700px) {
+            float: right;
+            margin-top: var(--s-3); 
+            margin-left: var(--s2);
+        }
+    }
+}
+
+.img-scroll {
+    position: relative;
+    width: 14rem;
+    display: block;
+    margin: var(--s1) auto var(--s2);
+    
+    &-window-wrap {
+        @extend .media;
+        &:focus-within {
+            @extend *:focus;
+            -moz-outline-radius: var(--outline-radius);
+        }
+    }
+
+    &-window {
+        position: relative;
+        margin: 0;
+        padding: 0 0 176%;
+        overflow: auto;
+        scrollbar-width: none;
+        border-radius: var(--border-radius);
+
+        &::-webkit-scrollbar {
+            width: 0;
+        }
+
+        &:focus {
+            outline: none;
+        }
+
+        > picture {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+        }
+    }
+
+    &-caption {
+        position: absolute;
+        font-size: $font-size-small;
+        text-transform: lowercase;
+        top: 50%;
+        left: 0;
+        transform: translate(-75%, -50%) rotate(-90deg) ;
+    }
+
+    @media screen and (min-width: 700px) {
+        float: right;
+        margin-top: var(--s-3); 
+        margin-left: var(--s2);
+    }
+}
+
+.looper {
+    margin-bottom: var(--s2);
+
+    &-video {
+        @extend .video;
+        position: relative;
+        margin-bottom: 0;
+
+        &:focus-within {
+            @extend *:focus;
+            -moz-outline-radius: var(--outline-radius);
+        
+            .looper-toggle {
+                opacity: 0;
+            }
+        }
+
+        &:hover {
+            .looper-toggle {
+                opacity: .5;
+            }
+        }
+
+        &-paused:focus-within {
+            .looper-toggle {
+                opacity: .5;
+            }
+        }
+    }
+
+    &-toggle {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 5.5rem;
+        height: 5.5rem;
+        transform: translate(-50%, -50%);
+        border-radius: 50%;
+        // padding: 1.625rem;
+        margin: 0;
+        box-shadow: none;
+        opacity: 0;
+        transition: opacity .1s linear;
+        display: flex;
+
+        &:focus {
+            outline: none;
+        }
+        
+        .looper:hover &:hover {
+            color: var(--color-text);
+            background-color: var(--color-base);
+            opacity: .8;
+        }
+
+        & svg {
+            width: 3rem;
+            height: 3rem;
+            fill: currentColor;
+            margin: auto;
+        }
+    }
+
+    
+
+    &-caption {
+        max-width: 30rem;
+        margin: var(--s-1) auto 0;
+    }
+}
+
+.video-embed {
+    @extend .video;
+
+    &-inner {
+        position: relative;    
+        width: 100%;
+        height: 0;
+        padding-bottom: 56.25%;
+    }
+
+    iframe {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+    }
+}
+
+.diagram {
+    margin: var(--s2) 0; 
+
+    svg {
+        display: block;
+        width: 100%;
+        height: auto;
+        margin: 0 auto;
+    }
+
+    &-text-normal {
+        font-size: 1.5rem;
+    }
+
+    &-text-small {
+        font-size: 1.25rem;
+    }
+
+}

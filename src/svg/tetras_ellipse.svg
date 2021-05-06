@@ -1,0 +1,29 @@
+<svg width="480" height="280" viewBox="0 0 480 280" style="max-width: 30rem; overflow: hidden;" aria-labelledby="ellipse-title" aria-describedby="ellipse-desc" role="img">
+    <title id="ellipse-title">Ellipse diagram</title>
+    <desc id="ellipse-desc">Diagram of an ellipse constructed from the arcs of four circles</desc>
+ <defs>
+  <marker id="a" overflow="visible" orient="auto">
+   <path d="m0.98 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0z" fill="currentColor" stroke="currentColor" stroke-width="1"/>
+  </marker>
+ </defs>
+ <path d="m122.85 208.46a78.505 78.498 0 0 1 0-135.96 235.52 235.49 0 0 1 235.52 0 78.505 78.498 0 0 1 0 135.96 235.52 235.49 0 0 1-235.52 0z" fill="var(--color-base)" fill-opacity=".5" marker-mid="url(#a)" marker-start="url(#a)" stroke="currentColor" stroke-width="2"/>
+ <g class="body-font" font-size="14px" text-anchor="middle">
+  <text x="112.09374" y="66.606651"><tspan x="112.09374" y="66.606651">a</tspan></text>
+  <text x="111.65013" y="220.71445"><tspan x="111.65013" y="220.71445">b</tspan></text>
+  <text x="369.54214" y="220.75954"><tspan x="369.54214" y="220.75954">c</tspan></text>
+  <text x="369.72263" y="66.606651"><tspan x="369.72263" y="66.606651">d</tspan></text>
+ </g>
+ <g fill="none" stroke="currentColor">
+  <g stroke-linejoin="round" stroke-dasharray="6, 2" stroke-width="1.5">
+   <ellipse cx="240.61" cy="4.2208" rx="235.82" ry="235.82" />
+   <ellipse cx="240.61" cy="276.26" rx="235.82" ry="235.2"/>
+   <ellipse cx="319.133" cy="140.48" rx="78.531" ry="78.531"/>
+   <ellipse cx="162.130" cy="140.48" rx="78.531" ry="78.531"/>
+  </g>
+  <g stroke-dasharray="3, 2" stroke-width="1.5">
+   <path d="m240.61 276.67-118.16-68.1-118.16-68.093 236.32-136.19 236.32 136.19-118.16 68.093z"/>
+   <path d="m122.85 72.495 117.76 204.17 117.76-204.17"/>
+   <path d="m122.85 208.46 117.76-204.17 117.76 204.17"/>
+  </g>
+ </g>
+</svg>

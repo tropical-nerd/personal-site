@@ -1,0 +1,28 @@
+<svg viewBox="0 0 380 300" width="380" height="300" style="max-width: 23.75rem" aria-labelledby="radiation-title" aria-describedby="radiation-desc" role="img">
+ <title id="radiation-title">Radiation</title>
+ <desc id="radiation-desc">Diagram of radiation bands emminating from epicenter</desc>
+ <defs>
+  <marker id="TriangleOutM" overflow="visible" orient="auto">
+   <path d="m5.77 0-8.65 5v-10z" fill="currentColor"/>
+  </marker>
+ </defs>
+ <g fill="none" stroke="currentColor" stroke-dasharray="6, 2" stroke-width="1.5">
+  <path d="m169.09 251.49 61.081 35.199"/>
+  <path d="m169.09 286.69 61.081-35.201"/>
+  <path d="m151.16 261.83 61.081 35.199"/>
+  <path d="m187.04 241.1 61.081 35.199"/>
+  <path d="m212.24 241.16-61.081 35.199"/>
+  <path d="m248.22 261.8-61.081 35.199"/>
+ </g>
+ <circle cx="199.69" cy="269.09" r="2.759" fill="currentColor" />
+ <g fill="var(--color-base)" fill-opacity=".25" stroke="currentColor" stroke-width="2">
+  <path d="m181.65 255.65a12.024 11.907 0 0 1 0-20.624 36.073 35.722 0 0 1 36.073 0 12.024 11.907 0 0 1 0 20.624 36.073 35.722 0 0 1-36.073 0z"/>
+  <path d="m155.46 243.95a29.486 29.442 0 0 1 0-50.994 88.463 88.329 0 0 1 88.463 0 29.486 29.442 0 0 1 0 50.994 88.463 88.329 0 0 1-88.463 0z"/>
+  <path d="m122.7 227.37a51.327 51.396 0 0 1 0-89.02 153.98 154.19 0 0 1 153.98 0 51.327 51.396 0 0 1 0 89.02 153.98 154.19 0 0 1-153.98 0z"/>
+  <path d="m93.604 209.53a70.722 70.899 0 0 1 0-122.8 212.18 212.7 0 0 1 212.18 0 70.722 70.899 0 0 1 0 122.8 212.18 212.7 0 0 1-212.18 0z"/>
+  <path d="m68.389 191.23a87.531 87.807 0 0 1 0-152.08 262.6 263.43 0 0 1 262.6 0 87.531 87.807 0 0 1 0 152.08 262.6 263.43 0 0 1-262.6 0z"/>
+ </g>
+ <path d="m15.697 116.84h-10.384v152.52h176.69" fill="none" marker-end="url(#TriangleOutM)" stroke="currentColor" stroke-width="2"/>
+ <text x="260.79175" y="273.71179" fill="currentColor" class="body-font">epicenter</text>
+ <path d="m206.93 268.99h48.539" fill="none" stroke="currentColor" stroke-width="1px"/>
+</svg>

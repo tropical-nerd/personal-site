@@ -1,0 +1,17 @@
+{
+  "title": "Charles Robertson",
+  "url": "https://charlesrobertson.io/",
+  "description": "The web design portfolio of Charles Robertson",
+  "feed": {
+    "subtitle": "I am writing about my experiences as a naval navel-gazer.",
+    "filename": "feed.xml",
+    "path": "/feed/feed.xml",
+    "url": "https://myurl.com/feed/feed.xml",
+    "id": "https://myurl.com/"
+  },
+  "author": {
+    "name": "Charles Robertson",
+    "email": "contact@charlesrobertson.io",
+    "twitter": "@tropical_nerd"
+  }
+}

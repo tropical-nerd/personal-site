@@ -1,0 +1,14 @@
+---
+layout: layouts/base.njk
+templateClass: tmpl-page
+---
+{# <nav class="breadcrumb-nav" aria-label="breadcrumb">
+  <ol>
+    <li><a href="{{ '/' | url }}">Home</a></li>
+    <li><a href="{{ page.url }}" aria-current="page">{{ title }}</a></li>
+  </ol>
+</nav> #}
+<h1>{{ title }}</h1>
+
+{{ content | safe }}
+
