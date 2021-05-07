@@ -4,21 +4,22 @@ slug: fun-with-arrays
 layout: layouts/post.njk
 order: 4
 linkHref: https://svelte.dev/repl/805300f5895f4ea89b73ba75de393db8?version=3.16.0
-linkText: svelte.dev/repl/805300f58...
+linkText: Svelte REPL
 cover:
     slug: fun-with-arrays_cover
     alt: Fun with Arrays
 tags: [ Svelte.js, Public Speaking ]
 scripts:
-    - /js/selectvid.js
-    - /js/looper.js
+    - bundle.js
+stylesheets:
+    - bundle.css
 ---
-{% looper 'fun-with-arrays' %}
+<section id="svelte-app" class="app app-fun-with-arrays"></section>
 
-Fun with Arrays is an array visualizer I spun up on stage at #FrontEndParty, a monthly meetup in New Orleans. The talk I gave was an introduction to [Svelte.js](https://svelte.dev). If you are not familiar, it is a component framework similar to Vue, React, or Angular, with the notable difference that it compiles at build time into vanilla JavaScript for smaller bundles and faster execution time.
+**Fun with Arrays** visualizes an array as series of squares and provides buttons to execute some of JavaScript's array methods. I live coded it on stage at #FrontEndParty, a monthly meetup in New Orleans. The talk was an introduction to [Svelte.js](https://svelte.dev), if you are not familiar, it is a component framework similar to Vue, React, or Angular, with the notable difference that it compiles at build time into vanilla JavaScript for smaller bundles and faster execution time.
 
-I made this as a project I could live-code in 7 minutes to demonstrate how easy it is to bind data structures to elements in Svelte (the styles were written ahead of time).  With minimal effort I was able to add transitions and FLIP animations to help illustrate the behavior of some popular JavaScript array methods.
+In 7 minutes I was able to demonstrate binding data structures to elements and attach Svelte's built in FLIP animations to illustrate the ways in which these functions mutate arrays.
 
-The app runs extremely fast and ends up weighing less than 37kB which is around half the size it would be in Vue, a quarter of what it would be in React, and one twelfth of the size it would be in Angular.
+The app runs extremely fast and ends up weighing less than 10kB, a small fraction of the bundle size that would be required by React, Vue or Angular. The size difference is most notable in small apps, making Svelte an excellent choice for interactive elements embedded in the page, which makes sense as it was initially created by the NY Times for the types of interactive data visualizations that often accompany their news articles. It has some performance gains over React as well. Svelte maintains a dependency graph that only updates the specific parts of the page that have changed. React uses a diffing approach that must compare the entire DOM to the shadow DOM on each update.
 
-See the code on the [Svelte REPL](https://svelte.dev/repl/805300f5895f4ea89b73ba75de393db8?version=3.16.0).
+If you would like to see the code or play with it in real time check out the [Svelte REPL](https://svelte.dev/repl/805300f5895f4ea89b73ba75de393db8?version=3.16.0).

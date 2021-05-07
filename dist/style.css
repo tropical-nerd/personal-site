@@ -56,7 +56,11 @@ svg {
   --outline-radius: .9rem;
   --font-size-normal: 1rem;
   --font-size-small: calc(.875 * var(--font-size-normal));
-  --font-size-large: calc(1.25 * var(--font-size-large));
+  --font-size-large: calc(1.25 * var(--font-size-normal));
+  --font-family-body: -system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol;
+  --font-family-heading: Akzidenz Grotesk BQ Super, Helvetica Black, Arial Black, sans-serif;
+  --font-weight-body: normal;
+  --font-weight-heading: 900;
   --duration: 0.2s; }
 
 *:focus, .img-scroll-window-wrap:focus-within, .looper-video:focus-within, .header-nav-item:focus-within {
@@ -159,12 +163,12 @@ main {
   font-weight: 900; }
 
 .body-font, body {
-  font-family: -system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol;
-  font-weight: normal; }
+  font-family: var(--font-family-body);
+  font-weight: var(--font-weight-body); }
 
 .heading-font, h1, h2, h3, .home-intro-name, .header-logo {
-  font-family: Akzidenz Grotesk BQ Super, Helvetica Black, Arial Black, sans-serif;
-  font-weight: 900; }
+  font-family: var(--font-family-heading);
+  font-weight: var(--font-weight-heading); }
 
 body {
   background-color: var(--color-background);
@@ -278,7 +282,6 @@ dd {
 
 .media, .video, .looper-video, .video-embed, .post-figure img, .img-scroll-window-wrap, .postlist-cover {
   display: block;
-  background-color: var(--color-text);
   border-radius: var(--border-radius);
   border: var(--border-width) solid var(--color-text);
   overflow: hidden; }
@@ -290,12 +293,15 @@ dd {
   width: 100%;
   max-width: 24rem;
   height: auto;
-  margin: var(--s2) auto; }
+  margin: var(--s2) auto;
+  background-color: var(--color-text); }
 
 .post-figure {
   width: 14rem;
   display: block;
   margin: var(--s2) auto; }
+  .post-figure img {
+    background-color: var(--color-text); }
   @media screen and (min-width: 700px) {
     .post-figure-left {
       float: left;
@@ -312,8 +318,10 @@ dd {
   width: 14rem;
   display: block;
   margin: var(--s1) auto var(--s2); }
-  .img-scroll-window-wrap:focus-within {
-    -moz-outline-radius: var(--outline-radius); }
+  .img-scroll-window-wrap {
+    background-color: var(--color-text); }
+    .img-scroll-window-wrap:focus-within {
+      -moz-outline-radius: var(--outline-radius); }
   .img-scroll-window {
     position: relative;
     margin: 0;
@@ -408,6 +416,9 @@ dd {
     font-size: 1.5rem; }
   .diagram-text-small {
     font-size: 1.25rem; }
+
+.app {
+  margin: var(--s3) 0 var(--s3); }
 
 .header {
   line-height: 1;

@@ -1,7 +1,6 @@
 .media {
     // box-sizing: content-box;
     display: block;
-    background-color: var(--color-text);
     border-radius: var(--border-radius);
     border: var(--border-width) solid var(--color-text);
     overflow: hidden;
@@ -18,6 +17,7 @@
     max-width: 24rem;
     height: auto;
     margin: var(--s2) auto;
+    background-color: var(--color-text);
 }
 
 .post-figure {
@@ -28,6 +28,7 @@
     img {
         @extend .media;
         // @include button-shadow;
+        background-color: var(--color-text);
     }
 
     &-left {
@@ -55,6 +56,8 @@
     
     &-window-wrap {
         @extend .media;
+        background-color: var(--color-text);
+
         &:focus-within {
             @extend *:focus;
             -moz-outline-radius: var(--outline-radius);
@@ -209,4 +212,8 @@
         font-size: 1.25rem;
     }
 
+}
+
+.app {
+    margin: var(--s3) 0 var(--s3);
 }

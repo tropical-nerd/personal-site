@@ -178,6 +178,12 @@ gulp.task('js', () =>
         .pipe(gulp.dest('dist/'))
 );
 
+// Copy page assets to individual page directories
+gulp.task('page-assets', () =>
+    gulp.src('src/page-assets/**/*', {base: 'src/page-assets'})
+    .pipe(gulp.dest('dist'))
+);
+
 // browserSync and file watching
 gulp.task('serve', function() {
     browserSync.init({
@@ -192,7 +198,8 @@ gulp.task('serve', function() {
     // gulp.watch('src/js/inline.js', gulp.series('js', 'pug'));
     gulp.watch('src/styles/*.css', gulp.series('styles'));
     gulp.watch('src/js/**/*.js', gulp.series('js'));
-    gulp.watch(['dist/index.html', 'dist/js/*']).on('change', browserSync.reload);
+    gulp.watch(['dist/index.html', 'dist/**/*.js']).on('change', browserSync.reload);
+    gulp.watch('src/page-assets/**/*', gulp.series('page-assets'));
 });
 
 gulp.task('default', gulp.series('serve'));
