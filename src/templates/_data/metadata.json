@@ -13,5 +13,19 @@
     "name": "Charles Robertson",
     "email": "contact@charlesrobertson.io",
     "twitter": "@tropical_nerd"
-  }
+  },
+  "navItems": [
+    {
+      "title": "Work",
+      "slug": "work"
+    },
+    {
+      "title": "Projects",
+      "slug": "projects"
+    },
+    {
+      "title": "Resume",
+      "slug": "resume"
+    }   
+  ]
 }

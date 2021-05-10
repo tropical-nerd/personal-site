@@ -1,0 +1,14 @@
+<header class="header header-facehead">
+    <div class="facehead">
+        <div class="facehead-code">
+            {% include 'facehead-code.njk' %}
+        </div>
+        <div class="facehead-gradient"></div>
+        <picture class="facehead-image">
+            <source srcset="/images/facehead-portrait.svg">
+            <source srcset="/images/facehead-landscape.svg" media="(min-width: 640px)">
+            <img src="/images/facehead-landscape.svg">
+        </picture>
+    </div>
+    {% include 'main-menu.njk' %}
+</header>
