@@ -4,4 +4,8 @@
 [ ] Add projects with actual interactive js
 [ ] Change menu structure to Portfolio, Projects, Blog
 [X] Add sass processing for additional stylesheets
+[X] New hero design
+[ ] New hero typography
+[ ] New home page design
+[ ] Remove cocohost from footer
 

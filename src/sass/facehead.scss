@@ -1,23 +1,26 @@
 .header-facehead {
     position: relative;
     display: block;
-    width: 100%;
     height: 100vh;
     margin-top: 0;
     margin-left: 0;
     margin-right: 0;
     padding: 0;
     overflow: hidden;
+    max-width: unset;
+    min-height: 640px;
 
     @media screen and (min-width: 640px) {
+        min-height: unset;
         height: 50vw;
+        max-height: 640px;
     }
 }
 
 .facehead {
+    width: 100%;
     position: absolute;
     top: 50%;
-    width: 100%;
     overflow: hidden;
     transform: translateY(-50%);
 
@@ -33,9 +36,13 @@
         position: absolute;
         width: 100%;
         column-count: 2;
-        font-size: .35rem;
+        font-size: 1vw;
         line-height: 1.5;
         background-color: #000033;
+
+        @media screen and (min-width: 1280px) {
+            font-size: 12.8px;
+        }
     }
 
     &-gradient {
@@ -50,12 +57,17 @@
     &-image {
         position: relative;
         display: block;
-        object-fit: cover;
+        // object-fit: cover;
         z-index: 2;
 
         @media screen and (min-width: 640px) {
-            height: 100%;
             width: auto;
+            height: 100%;
+
+            img {
+                width: auto;
+                height: 100%;
+            }
         }
     }
 
