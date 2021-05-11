@@ -9,6 +9,7 @@
     overflow: hidden;
     max-width: unset;
     min-height: 640px;
+    max-height: 217vw;
 
     @media screen and (min-width: 640px) {
         min-height: unset;
@@ -36,9 +37,14 @@
         position: absolute;
         width: 100%;
         column-count: 2;
-        font-size: 1vw;
+        font-size: 1.8vw;
         line-height: 1.5;
         background-color: #000033;
+        // display: none;
+
+        @media screen and (min-width: 640px) {
+            font-size: 1vw;
+        }
 
         @media screen and (min-width: 1280px) {
             font-size: 12.8px;

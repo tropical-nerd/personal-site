@@ -8,7 +8,8 @@
   padding: 0;
   overflow: hidden;
   max-width: unset;
-  min-height: 640px; }
+  min-height: 640px;
+  max-height: 217vw; }
   @media screen and (min-width: 640px) {
     .header-facehead {
       min-height: unset;
@@ -32,9 +33,12 @@
     position: absolute;
     width: 100%;
     column-count: 2;
-    font-size: 1vw;
+    font-size: 1.8vw;
     line-height: 1.5;
     background-color: #000033; }
+    @media screen and (min-width: 640px) {
+      .facehead-code {
+        font-size: 1vw; } }
     @media screen and (min-width: 1280px) {
       .facehead-code {
         font-size: 12.8px; } }
