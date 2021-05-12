@@ -420,21 +420,30 @@ dd {
   .header-logo {
     display: flex;
     align-items: flex-end;
-    min-height: 2.89em;
+    min-height: 2.5em;
     background-color: var(--color-base);
-    padding: var(--s-2);
-    font-size: 1rem; }
+    padding: 0 var(--s-2) var(--s-2) var(--s-1);
+    font-size: calc(var(--font-size-normal) * 1.5); }
     .header-logo:hover {
       background-color: var(--color-base-light); }
   .header-nav {
+    display: flex;
+    align-items: flex-end;
     margin-top: var(--s-1);
     font-size: 0.875rem; }
   .header-nav-list {
     display: inline-block;
     display: flex;
-    justify-content: space-between; }
+    justify-content: flex-end;
+    width: 100%; }
   .header-nav-item {
     display: inline-block; }
+    .header-nav-item:first-child {
+      margin-left: 10%; }
+    .header-nav-item:last-child {
+      margin-right: 5%; }
+    .header-nav-item + .header-nav-item {
+      margin-left: 10%; }
     .header-nav-item:hover {
       background-color: var(--color-base); }
     .header-nav-item.current {
@@ -449,7 +458,7 @@ dd {
       .header-nav-item a:focus {
         outline: none; }
     .header-nav-item-inner {
-      padding: var(--s-2) 0 calc(var(--s-2) - 3px);
+      padding: var(--s-2) 0 var(--s-2);
       border-bottom: 3px solid var(--color-base); }
   @media screen and (min-width: 350px) {
     .header {
@@ -473,7 +482,7 @@ dd {
         margin-left: var(--s-2); } }
   @media screen and (min-width: 480px) {
     .header-logo {
-      font-size: 1.25rem;
+      font-size: 2rem;
       padding: var(--s-1); }
     .header-nav {
       font-size: 1rem; }
