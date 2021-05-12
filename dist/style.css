@@ -483,7 +483,7 @@ dd {
   @media screen and (min-width: 480px) {
     .header-logo {
       font-size: 2rem;
-      padding: var(--s-1); }
+      padding: var(--s-1) var(--s-1) var(--s-1) var(--s0); }
     .header-nav {
       font-size: 1rem; }
     .header-nav-item {

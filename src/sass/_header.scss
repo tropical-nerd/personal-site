@@ -128,7 +128,7 @@
     @media screen and (min-width: 480px) {
         &-logo {
             font-size: 2rem;
-            padding: var(--s-1);
+            padding: var(--s-1) var(--s-1) var(--s-1) var(--s0);
         }
     
         &-nav {
