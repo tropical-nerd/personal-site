@@ -58,7 +58,7 @@ svg {
   --font-size-small: calc(.875 * var(--font-size-normal));
   --font-size-large: calc(1.25 * var(--font-size-normal));
   --font-family-body: -system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol;
-  --font-family-heading: Akzidenz Grotesk BQ Super, Helvetica Black, Arial Black, sans-serif;
+  --font-family-heading: Tungsten Medium, Helvetica Neue Condensed, Arial Narrow, Arial, sans-serif;
   --font-weight-body: normal;
   --font-weight-heading: 900;
   --duration: 0.2s; }
@@ -161,6 +161,11 @@ main {
   font-family: Akzidenz Grotesk BQ Super;
   src: url("/fonts/AkzidenzGroteskBQ-Super.woff2") format("woff2"), url("/fonts/AkzidenzGroteskBQ-Super.woff") format("woff");
   font-weight: 900; }
+
+@font-face {
+  font-family: 'Tungsten Medium';
+  src: url("/fonts/Tungsten-Medium.woff2") format("woff2"), url("/fonts/Tungsten-Medium.woff") format("woff");
+  font-weight: normal; }
 
 .body-font, body {
   font-family: var(--font-family-body);

@@ -2,10 +2,10 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Charles Robertson :: Fun with Arrays</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Charles Robertson :: Nigel Lyons</title>
     <meta name="description" content="The web design portfolio of Charles Robertson">
     <!-- Stylesheets -->
-    <link rel="stylesheet" href="/style.css"><link rel="stylesheet" href="bundle.css">
+    <link rel="stylesheet" href="/style.css">
     
     
     <!-- Favicons -->
@@ -17,7 +17,7 @@
     <link rel="shortcut icon" href="/favicons/favicon.ico">
     <meta name="msapplication-TileColor" content="#36ffb4">
     <meta name="msapplication-config" content="/favicons/browserconfig.xml">
-    <meta name="theme-color" content="#ffffff"><!-- Scripts --><script src="bundle.js" defer></script></head>
+    <meta name="theme-color" content="#ffffff"><!-- Scripts --><script src="/js/imhance.js" defer></script></head>
   <body id="page-top" class="no-js">
     
     <svg style="display:none">
@@ -56,7 +56,7 @@
             </a>      <nav class="header-nav">
         <ul class="header-nav-list">
           
-            <li class="header-nav-item">
+            <li class="header-nav-item current">
               <a href="/portfolio/">
                 <div class="header-nav-item-inner">
                   Portfolio
@@ -64,7 +64,7 @@
               </a>
             </li>
           
-            <li class="header-nav-item current">
+            <li class="header-nav-item">
               <a href="/projects/">
                 <div class="header-nav-item-inner">
                   Projects
@@ -79,17 +79,34 @@
         
 
 <div class="post-heading">
-  <h1>Fun with Arrays</h1>
+  <h1>Nigel Lyons</h1>
   
-    <a href="https://svelte.dev/repl/805300f5895f4ea89b73ba75de393db8?version=3.16.0">Svelte REPL</a>
+    <a href="https://nigelyons.com">nigelyons.com</a>
   
 </div>
 
-<section id="svelte-app" class="app app-fun-with-arrays"></section>
-<p><strong>Fun with Arrays</strong> visualizes an array as series of squares and provides buttons to execute some of JavaScript's array methods. I live coded it on stage at #FrontEndParty, a monthly meetup in New Orleans. The talk was an introduction to <a href="https://svelte.dev">Svelte.js</a>, if you are not familiar, it is a component framework similar to Vue, React, or Angular, with the notable difference that it compiles at build time into vanilla JavaScript for smaller bundles and faster execution time.</p>
-<p>In 7 minutes I was able to demonstrate binding data structures to elements and attach Svelte's built in FLIP animations to illustrate the ways in which these functions mutate arrays.</p>
-<p>The app runs extremely fast and ends up weighing less than 10kB, a small fraction of the bundle size that would be required by React, Vue or Angular. The size difference is most notable in small apps, making Svelte an excellent choice for interactive elements embedded in the page, which makes sense as it was initially created by the NY Times for the types of interactive data visualizations that often accompany their news articles. It has some performance gains over React as well. Svelte maintains a dependency graph that only updates the specific parts of the page that have changed. React uses a diffing approach that must compare the entire DOM to the shadow DOM on each update.</p>
-<p>If you would like to see the code or play with it in real time check out the <a href="https://svelte.dev/repl/805300f5895f4ea89b73ba75de393db8?version=3.16.0">Svelte REPL</a>.</p>
+<div class="img-scroll imhance">
+      <figure>
+        <div class="img-scroll-window-wrap">
+          <div class="img-scroll-window" tabindex="0">
+            <picture>
+          <source srcset="/images/nigel-lyons_home_360.webp 360w,/images/nigel-lyons_home_480.webp 480w,/images/nigel-lyons_home_640.webp 640w,/images/nigel-lyons_home_800.webp 800w,/images/nigel-lyons_home_1024.webp 1024w,/images/nigel-lyons_home_1280.webp 1280w,/images/nigel-lyons_home_1600.webp 1600w" type="image/webp">
+          <source srcset="/images/nigel-lyons_home_360.jpg 360w,/images/nigel-lyons_home_480.jpg 480w,/images/nigel-lyons_home_640.jpg 640w,/images/nigel-lyons_home_800.jpg 800w,/images/nigel-lyons_home_1024.jpg 1024w,/images/nigel-lyons_home_1280.jpg 1280w,/images/nigel-lyons_home_1600.jpg 1600w" type="image/jpeg">
+          <img  src="/images/nigel-lyons_home_480.jpg" srcset="/images/nigel-lyons_home_360.jpg 360w, /images/nigel-lyons_home_480.jpg 480w, /images/nigel-lyons_home_640.jpg 640w, /images/nigel-lyons_home_800.jpg 800w, /images/nigel-lyons_home_1024.jpg 1024w, /images/nigel-lyons_home_1280.jpg 1280w, /images/nigel-lyons_home_1600.jpg 1600w"  alt="Home page of nigelyons.com" width="480" height="4692">
+      </picture>
+          </div>
+        </div>
+        <div class="img-scroll-caption">← Scroll →</div>
+      </figure>
+    </div>
+<p>Nigel Lyons is an independent video producer in Washington, DC. In 2015, with Sediment Press, I designed his logo, business card and a portfolio site using WordPress. In 2019 we redesigned the site as a static single page that would highlight some of his best work. The main design considerations we had were:</p>
+<ul>
+<li>Effectively showcasing his video portfolio.</li>
+<li>Building off of his current branding.</li>
+<li>Looking natively designed for any device that used it.</li>
+</ul>
+<p>As a single page site, a CMS would have added a lot of overhead. I could have written the site directly in HTML and CSS, completely forgoing a build step, but I chose to generate the site in Node to gain the benefit of some modern development tools. I used Pug for the templates, Stylus as a CSS preprocessor, Gulp as an asset bundler, and browserSync for live reloading. This stack allowed me to automate repetitive tasks without giving up granular control over the finished product.</p>
+<p>The main challenges I faced in creating a truly responsive site were the header design, whitespace management, and arrangement of content blocks. For the header I used to CSS grid to create a vertical version for narrow screens and a horizontal version for when space would allow. To keep whitespace proportional I made margin system using CSS custom properties that coordinated changing all the margins on the page by adjusting a few variables. CSS grid proved useful again in intrinsically laying out the video cards in flexible grid, and for rearranging the site layout on larger screen sizes.</p>
 
 
 
@@ -105,7 +122,7 @@
       
     
     
-    <div class="post-nav-prev">← <a href="/projects/dactyl-nightmare/">Dactyl Nightmare</a></div>
+    <div class="post-nav-prev">← <a href="/portfolio/sediment-press/">Sediment Press</a></div>
   
 
   <div class="post-nav-top"><a href="#page-top">Back to top</a> ↑</div>
@@ -115,7 +132,7 @@
       
     
 
-    <div class="post-nav-next"><a href="/projects/tetras/">Tetras</a> →</div>
+    <div class="post-nav-next"><a href="/portfolio/center-staging/">Center Staging</a> →</div>
   
 
 </div><footer class="footer">

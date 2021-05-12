@@ -16,16 +16,12 @@
   },
   "navItems": [
     {
-      "title": "Work",
-      "slug": "work"
+      "title": "Portfolio",
+      "slug": "portfolio"
     },
     {
       "title": "Projects",
       "slug": "projects"
-    },
-    {
-      "title": "Resume",
-      "slug": "resume"
-    }   
+    }
   ]
 }

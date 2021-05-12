@@ -19,6 +19,14 @@
     font-weight: 900;
 }
 
+@font-face {
+    font-family: 'Tungsten Medium';
+    src:    url("/fonts/Tungsten-Medium.woff2") format("woff2"),
+            url("/fonts/Tungsten-Medium.woff") format("woff");
+
+    font-weight: normal;
+}
+
 $font-size-small: .875rem;
 $font-size-normal: 1rem;
 $font-size-large: 1.25rem;

@@ -2,10 +2,10 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Charles Robertson :: Fun with Arrays</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Charles Robertson :: Spruced</title>
     <meta name="description" content="The web design portfolio of Charles Robertson">
     <!-- Stylesheets -->
-    <link rel="stylesheet" href="/style.css"><link rel="stylesheet" href="bundle.css">
+    <link rel="stylesheet" href="/style.css">
     
     
     <!-- Favicons -->
@@ -17,7 +17,7 @@
     <link rel="shortcut icon" href="/favicons/favicon.ico">
     <meta name="msapplication-TileColor" content="#36ffb4">
     <meta name="msapplication-config" content="/favicons/browserconfig.xml">
-    <meta name="theme-color" content="#ffffff"><!-- Scripts --><script src="bundle.js" defer></script></head>
+    <meta name="theme-color" content="#ffffff"><!-- Scripts --><script src="/js/imhance.js" defer></script></head>
   <body id="page-top" class="no-js">
     
     <svg style="display:none">
@@ -56,7 +56,7 @@
             </a>      <nav class="header-nav">
         <ul class="header-nav-list">
           
-            <li class="header-nav-item">
+            <li class="header-nav-item current">
               <a href="/portfolio/">
                 <div class="header-nav-item-inner">
                   Portfolio
@@ -64,7 +64,7 @@
               </a>
             </li>
           
-            <li class="header-nav-item current">
+            <li class="header-nav-item">
               <a href="/projects/">
                 <div class="header-nav-item-inner">
                   Projects
@@ -79,17 +79,29 @@
         
 
 <div class="post-heading">
-  <h1>Fun with Arrays</h1>
+  <h1>Spruced</h1>
   
-    <a href="https://svelte.dev/repl/805300f5895f4ea89b73ba75de393db8?version=3.16.0">Svelte REPL</a>
+    <a href="https://spruced-dc.com">spruced-dc.com</a>
   
 </div>
 
-<section id="svelte-app" class="app app-fun-with-arrays"></section>
-<p><strong>Fun with Arrays</strong> visualizes an array as series of squares and provides buttons to execute some of JavaScript's array methods. I live coded it on stage at #FrontEndParty, a monthly meetup in New Orleans. The talk was an introduction to <a href="https://svelte.dev">Svelte.js</a>, if you are not familiar, it is a component framework similar to Vue, React, or Angular, with the notable difference that it compiles at build time into vanilla JavaScript for smaller bundles and faster execution time.</p>
-<p>In 7 minutes I was able to demonstrate binding data structures to elements and attach Svelte's built in FLIP animations to illustrate the ways in which these functions mutate arrays.</p>
-<p>The app runs extremely fast and ends up weighing less than 10kB, a small fraction of the bundle size that would be required by React, Vue or Angular. The size difference is most notable in small apps, making Svelte an excellent choice for interactive elements embedded in the page, which makes sense as it was initially created by the NY Times for the types of interactive data visualizations that often accompany their news articles. It has some performance gains over React as well. Svelte maintains a dependency graph that only updates the specific parts of the page that have changed. React uses a diffing approach that must compare the entire DOM to the shadow DOM on each update.</p>
-<p>If you would like to see the code or play with it in real time check out the <a href="https://svelte.dev/repl/805300f5895f4ea89b73ba75de393db8?version=3.16.0">Svelte REPL</a>.</p>
+<div class="img-scroll imhance">
+      <figure>
+        <div class="img-scroll-window-wrap">
+          <div class="img-scroll-window" tabindex="0">
+            <picture>
+          <source srcset="/images/spruced_home_360.webp 360w,/images/spruced_home_480.webp 480w,/images/spruced_home_640.webp 640w,/images/spruced_home_800.webp 800w,/images/spruced_home_1024.webp 1024w,/images/spruced_home_1280.webp 1280w,/images/spruced_home_1600.webp 1600w" type="image/webp">
+          <source srcset="/images/spruced_home_360.jpg 360w,/images/spruced_home_480.jpg 480w,/images/spruced_home_640.jpg 640w,/images/spruced_home_800.jpg 800w,/images/spruced_home_1024.jpg 1024w,/images/spruced_home_1280.jpg 1280w,/images/spruced_home_1600.jpg 1600w" type="image/jpeg">
+          <img  src="/images/spruced_home_480.jpg" srcset="/images/spruced_home_360.jpg 360w, /images/spruced_home_480.jpg 480w, /images/spruced_home_640.jpg 640w, /images/spruced_home_800.jpg 800w, /images/spruced_home_1024.jpg 1024w, /images/spruced_home_1280.jpg 1280w, /images/spruced_home_1600.jpg 1600w"  alt="Full scrollable services page of spruced-dc.com" width="480" height="4260">
+      </picture>
+          </div>
+        </div>
+        <div class="img-scroll-caption">← Scroll →</div>
+      </figure>
+    </div>
+<p>Spruced is a personal organization company in Washington, DC. I worked closely with Cary, the owner, on the visual design and content to create a website that would advertise her services and attract clients.</p>
+<p>It was important that the design communicate a clean, organized aesthetic. We had a great starting point with origami-inspired logo by <a href="https://walkerinkworks.com/">Walker Ink</a> which helped establish the feel and color scheme. For the services page, we were able to the simplify the process to three easy to follow steps. When combined with stock photography it could be arranged nicely into an alternating 2 by 3 grid on larger screens.</p>
+<p>After the website launched, Cary advertised on Facebook and Google. Almost immediately she had more clients than her schedule permitted. We got feedback from clients that they chose Spruced because the website was clean and well organized. The design established a strong brand, clearly communicated her services, and gave potential customers a sense of trust that she could do what was advertised.</p>
 
 
 
@@ -105,7 +117,7 @@
       
     
     
-    <div class="post-nav-prev">← <a href="/projects/dactyl-nightmare/">Dactyl Nightmare</a></div>
+    <div class="post-nav-prev">← <a href="/portfolio/cdesigns-inc/">CDesigns Inc.</a></div>
   
 
   <div class="post-nav-top"><a href="#page-top">Back to top</a> ↑</div>
@@ -115,7 +127,7 @@
       
     
 
-    <div class="post-nav-next"><a href="/projects/tetras/">Tetras</a> →</div>
+    <div class="post-nav-next"><a href="/portfolio/sediment-press/">Sediment Press</a> →</div>
   
 
 </div><footer class="footer">

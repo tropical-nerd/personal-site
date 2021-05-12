@@ -8,4 +8,5 @@
 [ ] New hero typography
 [ ] New home page design
 [ ] Remove cocohost from footer
+[ ] Add woff compatibility for fonts
 
