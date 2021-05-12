@@ -185,12 +185,7 @@ p, ul, ol, dl {
 h1 {
   font-size: var(--s3);
   margin: var(--s4) 0 var(--s3);
-  color: var(--color-base);
-  text-shadow: 1px 1px 0 var(--color-text), -1px -1px 0 var(--color-text), -1px 1px 0 var(--color-text), 1px -1px 0 var(--color-text), 1px 0 0 var(--color-text), -1px 0 0 var(--color-text), 0 1px 0 var(--color-text), 0 -1px 0 var(--color-text); }
-  @supports (-webkit-text-stroke: 1px black) {
-    h1 {
-      -webkit-text-stroke: 1px var(--color-text);
-      text-shadow: unset; } }
+  color: var(--color-base); }
 
 h2 {
   font-size: var(--s2);
@@ -211,12 +206,6 @@ h4, dt {
   font-weight: 600;
   display: block;
   margin-top: var(--s-3); }
-
-.link-underline, a, .postlist-heading {
-  text-decoration: underline; }
-  @supports (text-decoration: underline red 2px) {
-    .link-underline, a, .postlist-heading {
-      text-decoration: underline var(--color-base) 2px; } }
 
 a {
   color: var(--color-text); }
@@ -262,12 +251,7 @@ dd {
   font-size: var(--s3);
   line-height: 1;
   margin: var(--s1) 0 var(--s0);
-  color: var(--color-base);
-  text-shadow: 1px 1px 0 var(--color-text), -1px -1px 0 var(--color-text), -1px 1px 0 var(--color-text), 1px -1px 0 var(--color-text), 1px 0 0 var(--color-text), -1px 0 0 var(--color-text), 0 1px 0 var(--color-text), 0 -1px 0 var(--color-text); }
-  @supports (-webkit-text-stroke: 1px black) {
-    .home-intro-name {
-      -webkit-text-stroke: 1px var(--color-text);
-      text-shadow: unset; } }
+  color: var(--color-base); }
 
 .home-intro-desc {
   display: block;
@@ -428,11 +412,12 @@ dd {
 .header {
   line-height: 1;
   margin-top: var(--s1); }
+  .header-bar {
+    display: flex; }
   .header a {
     text-decoration: none;
     color: var(--color-text); }
   .header-logo {
-    display: block;
     display: flex;
     align-items: flex-end;
     min-height: 2.89em;

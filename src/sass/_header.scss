@@ -3,13 +3,16 @@
     line-height: 1;
     margin-top: var(--s1);
     
+    &-bar {
+        display: flex;
+    }
+    
     a {
         text-decoration: none;
         color: var(--color-text);
     }
   
     &-logo {
-        display: block;
         display: flex;
         align-items: flex-end;
         // flex-basis: 6.5em;

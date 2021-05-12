@@ -1,11 +1,6 @@
     <header class="header">
-      {# <div class="header-inner"> #}
-      <a class="header-logo" href="{{ '/' | url }}" title="Home">
-        {# <div class="header-logo-text"> #}
-              Charles Robertson
-            {# </div> #}</a>
-
-      {#- Read more about `eleventy-navigation` at https://github.com/11ty/eleventy-navigation #}
+      <div class="header-bar">
+        <a class="header-logo" href="{{ '/' | url }}" title="Home">Charles Robertson</a>
         {%- include 'header-nav.njk' -%}
-      {# </div> #}
+      </div>
     </header>
