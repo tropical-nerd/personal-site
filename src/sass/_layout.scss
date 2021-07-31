@@ -6,6 +6,16 @@ body {
     overflow-x: hidden;
 }
 
+main {
+    flex-grow: 1;
+    margin-top: var(--s3);
+    // margin: var(--s3) var(--body-padding) 0 var(--body-padding);
+
+    > :first-child {
+        margin-top: 0;
+    }
+}
+
 .site-container {
     width: 100%;
     max-width: calc(60rem + 2 * var(--body-padding));
@@ -20,15 +30,8 @@ body {
     max-width: calc(40rem + 2 * var(--body-padding));
 }
 
-main {
+.post-heading, .postlist {
     @extend .site-container;
-    flex-grow: 1;
-    margin-top: var(--s3);
-    // margin: var(--s3) var(--body-padding) 0 var(--body-padding);
-
-    > :first-child {
-        margin-top: 0;
-    }
 }
 
 .post-nav {
