@@ -13,7 +13,9 @@ stylesheets: [facehead.css]
 ---
 <!-- <h1 class="visually-hidden">Introduction</h1> -->
 
-<p class="home-intro"><span class="home-intro-hi">Hi, I'm</span> <span class="home-intro-name">Charles<br>Robertson.</span> <span class="home-intro-desc">I am a front-end developer and graphic designer who creates resilient, accessible and beautiful interfaces for the web.</span></p>
+<section class="home-intro">
+<p class="home-intro-desc">I am a front-end developer and graphic designer who creates resilient, accessible and beautiful interfaces for the web.</p>
+</section>
 
 I have experience building websites for clients using Node.js and WordPress. You can see those in the [Work](work) section.
 

@@ -8,11 +8,16 @@ body {
 
 .site-container {
     width: 100%;
-    max-width: calc(40rem + 2 * var(--body-padding));
+    max-width: calc(60rem + 2 * var(--body-padding));
     margin-left: auto;
     margin-right: auto;
     padding-left: var(--body-padding);
     padding-right: var(--body-padding);
+}
+
+.single-column {
+    @extend .site-container;
+    max-width: calc(40rem + 2 * var(--body-padding));
 }
 
 main {

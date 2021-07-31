@@ -1,9 +1,10 @@
 .header {
-    @extend .site-container;
+    // @extend .site-container;
     line-height: 1;
     margin-top: var(--s1);
     
     &-bar {
+        @extend .site-container;
         display: flex;
     }
     
