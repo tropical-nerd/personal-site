@@ -11,10 +11,10 @@ cover:
 description: Charles Robertson is web designer and developer working to build a better web.
 stylesheets: [facehead.css]
 ---
-<!-- <h1 class="visually-hidden">Introduction</h1> -->
+<h1 class="visually-hidden">Introduction</h1>
 
 <section class="home-intro">
-<p class="home-intro-desc">I am a front-end developer and graphic designer who creates resilient, accessible and beautiful interfaces for the web.</p>
+    <p class="home-intro-desc">I am a front-end developer and graphic designer who creates resilient, accessible and beautiful interfaces for the web.</p>
 </section>
 
 I have experience building websites for clients using Node.js and WordPress. You can see those in the [Work](work) section.

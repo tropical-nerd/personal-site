@@ -142,7 +142,7 @@ main {
   main > :first-child {
     margin-top: 0; }
 
-.site-container, .single-column, .post-heading, .postlist, .post-nav, .header-bar {
+.site-container, .single-column > *, .post-heading, .postlist, .post-nav, .header-bar {
   width: 100%;
   max-width: calc(60rem + 2 * var(--body-padding));
   margin-left: auto;
@@ -150,7 +150,7 @@ main {
   padding-left: var(--body-padding);
   padding-right: var(--body-padding); }
 
-.single-column {
+.single-column > * {
   max-width: calc(40rem + 2 * var(--body-padding)); }
 
 .post-nav {

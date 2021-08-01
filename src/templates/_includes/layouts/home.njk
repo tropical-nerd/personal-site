@@ -8,7 +8,9 @@ templateClass: page-home
 {%- endblock-%}
 
 {%- block content -%}
-    {{ content | safe }}
+    <article>
+        {{ content | safe }}
+    </article>
 {% endblock %}
 
 {# {% include "post-nav.njk" %} #}

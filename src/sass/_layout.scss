@@ -25,7 +25,7 @@ main {
     padding-right: var(--body-padding);
 }
 
-.single-column {
+.single-column > * {
     @extend .site-container;
     max-width: calc(40rem + 2 * var(--body-padding));
 }
