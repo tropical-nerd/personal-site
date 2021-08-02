@@ -79,7 +79,7 @@
 <div class="post-heading">
   <h1>Nigel Lyons</h1>
   
-    <a href="https://nigelyons.com">nigelyons.com</a>
+    <a href="https://nigelyons.video">nigelyons.video</a>
   
 </div>
 
@@ -90,21 +90,21 @@
             <picture>
           <source srcset="/images/nigel-lyons_home_360.webp 360w,/images/nigel-lyons_home_480.webp 480w,/images/nigel-lyons_home_640.webp 640w,/images/nigel-lyons_home_800.webp 800w,/images/nigel-lyons_home_1024.webp 1024w,/images/nigel-lyons_home_1280.webp 1280w,/images/nigel-lyons_home_1600.webp 1600w" type="image/webp">
           <source srcset="/images/nigel-lyons_home_360.jpg 360w,/images/nigel-lyons_home_480.jpg 480w,/images/nigel-lyons_home_640.jpg 640w,/images/nigel-lyons_home_800.jpg 800w,/images/nigel-lyons_home_1024.jpg 1024w,/images/nigel-lyons_home_1280.jpg 1280w,/images/nigel-lyons_home_1600.jpg 1600w" type="image/jpeg">
-          <img  src="/images/nigel-lyons_home_480.jpg" srcset="/images/nigel-lyons_home_360.jpg 360w, /images/nigel-lyons_home_480.jpg 480w, /images/nigel-lyons_home_640.jpg 640w, /images/nigel-lyons_home_800.jpg 800w, /images/nigel-lyons_home_1024.jpg 1024w, /images/nigel-lyons_home_1280.jpg 1280w, /images/nigel-lyons_home_1600.jpg 1600w"  alt="Home page of nigelyons.com" width="480" height="4692">
+          <img  src="/images/nigel-lyons_home_480.jpg" srcset="/images/nigel-lyons_home_360.jpg 360w, /images/nigel-lyons_home_480.jpg 480w, /images/nigel-lyons_home_640.jpg 640w, /images/nigel-lyons_home_800.jpg 800w, /images/nigel-lyons_home_1024.jpg 1024w, /images/nigel-lyons_home_1280.jpg 1280w, /images/nigel-lyons_home_1600.jpg 1600w"  alt="Home page of nigelyons.video" width="480" height="4692">
       </picture>
           </div>
         </div>
         <div class="img-scroll-caption">← Scroll →</div>
       </figure>
     </div>
-<p>Nigel Lyons is an independent video producer in Washington, DC. In 2015, with Sediment Press, I designed his logo, business card and a portfolio site using WordPress. In 2019 we redesigned the site as a static single page that would highlight some of his best work. The main design considerations we had were:</p>
+<p>Nigel Lyons is an independent video producer in Washington, DC. In 2015, with Sediment Press, I designed his logo, business card and a portfolio site using WordPress. In 2019 I redesigned the site as a static single page that would highlight some of his best work. The main design considerations we had were:</p>
 <ul>
 <li>Effectively showcasing his video portfolio.</li>
-<li>Building off of his current branding.</li>
-<li>Looking natively designed for any device that used it.</li>
+<li>Building a design system based on his existing branding.</li>
+<li>Rock solid responsive design that looks great on any device.</li>
 </ul>
-<p>As a single page site, a CMS would have added a lot of overhead. I could have written the site directly in HTML and CSS, completely forgoing a build step, but I chose to generate the site in Node to gain the benefit of some modern development tools. I used Pug for the templates, Stylus as a CSS preprocessor, Gulp as an asset bundler, and browserSync for live reloading. This stack allowed me to automate repetitive tasks without giving up granular control over the finished product.</p>
-<p>The main challenges I faced in creating a truly responsive site were the header design, whitespace management, and arrangement of content blocks. For the header I used to CSS grid to create a vertical version for narrow screens and a horizontal version for when space would allow. To keep whitespace proportional I made margin system using CSS custom properties that coordinated changing all the margins on the page by adjusting a few variables. CSS grid proved useful again in intrinsically laying out the video cards in flexible grid, and for rearranging the site layout on larger screen sizes.</p>
+<p>As a single page site, a CMS would have added a lot of overhead. I could have written the site directly in HTML and CSS, completely forgoing a build step, but I chose to generate the site in Node to gain the benefit of some modern development tools. I used Pug for the templates, Stylus as a CSS preprocessor, Gulp as an asset bundler, and browserSync for live reloading. This stack allowed me to automate repetitive tasks without giving up granular control over the finished product. Pug's mixins were a huge time saver, they allowed me to treat the blocks and video cards as components, where I could pass in the data as a property to generate structured markup.</p>
+<p>The main challenges I faced in creating a truly responsive site were the header design, whitespace management, and arrangement of content blocks. For the header I used to CSS grid to create a vertical version for narrow screens and a horizontal version wider devices. To keep whitespace proportional I made a margin system utilizing CSS custom properties that coordinated changing all the margins on the page by adjusting a few variables. CSS grid proved useful again in intrinsically laying out the video cards in flexible grid, and for rearranging the site layout on larger screen sizes.</p>
 
 </article>
 

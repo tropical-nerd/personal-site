@@ -2,11 +2,11 @@
 [ ] Add created-date to projects
 [ ] Change brand color to match resume
 [ ] Add projects with actual interactive js
-[X] Change menu structure to Portfolio, Projects, Blog
+[X] Change menu structure to Portfolio, Lab, About
 [X] Add sass processing for additional stylesheets
 [X] New hero design
 [X] New hero typography
 [ ] New home page design
-[X] Remove cocohost from footer
-[X] Add woff compatibility for fonts
-
+[ ] Add About page
+[X] Edit Nigel Lyons page
+[X] Get Nigel Lyons page back online
