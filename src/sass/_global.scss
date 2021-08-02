@@ -12,7 +12,7 @@
     --s4: calc(var(--s3) * var(--scale));
     --s5: calc(var(--s4) * var(--scale));
 
-    --body-padding: var(--s-1);
+    --body-padding: var(--s0);
     --main-width: calc(40rem + 2 * var(--body-padding));
     --space: s0;
 
@@ -59,13 +59,13 @@
 
 @media screen and (min-width: 480px) {
     :root {
-        --body-padding: var(--s0);
+        --body-padding: var(--s1);
     }
 }
 
 @media screen and (min-width: 640px) {
     :root {
-        --body-padding: var(--s1);
+        --body-padding: var(--s2);
     }
 }
 

@@ -12,11 +12,13 @@ eleventyNavigation:
   order: 1
   title: Portfolio
 ---
-<div class="post-heading">
-  <h1>{{ title }}</h1>
-  <p>The following are case studies of websites I have built for clients.</p>  
-</div>
+<article class="site-container">
+  <div class="post-heading">
+    <h1>{{ title }}</h1>
+    <p>The following are case studies of websites I have built for clients.</p>  
+  </div>
 
-{% set postlist = (collections.portfolio | sortByOrder(true)) %}
-{% include "postlist.njk" %}
+  {% set postlist = (collections.portfolio | sortByOrder(true)) %}
+  {% include "postlist.njk" %}
+</article>
 

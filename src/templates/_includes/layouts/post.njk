@@ -1,5 +1,4 @@
 ---
-layout: layouts/base.njk
 templateClass: template-post
 ---
 {# <nav class="breadcrumb-nav" aria-label="Breadcrumb">
@@ -9,15 +8,22 @@ templateClass: template-post
     <li><a href="{{ page.url }}" aria-current="page">{{ title }}</a></li>
   </ol>
 </nav> #}
+{% extends 'layouts/base.njk' %}
 
-<article class="single-column">
-<div class="post-heading">
-  <h1>{{ title }}</h1>
-  {% if linkHref %}
-    <a href="{{ linkHref }}">{{ linkText }}</a>
-  {% endif %}
-</div>
+{% block content %}
+  <article class="single-column">
+    <div class="post-heading">
+      <h1>{{ title }}</h1>
+      {% if linkHref %}
+        <a href="{{ linkHref }}">{{ linkText }}</a>
+      {% endif %}
+    </div>
 
-{{ content | safe }}
-</article>
-{# {% include "post-nav.njk" %} #}
+    {{ content | safe }}
+  </article>
+{% endblock %}
+
+{% block footer %}
+  {% include "post-nav.njk" %}
+  {% include "footer.njk" %}
+{% endblock %}

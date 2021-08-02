@@ -2,7 +2,7 @@
 [ ] Add created-date to projects
 [ ] Change brand color to match resume
 [ ] Add projects with actual interactive js
-[X] Change menu structure to Portfolio, Lab, About
+[ ] Change menu structure to Portfolio, Lab, About
 [X] Add sass processing for additional stylesheets
 [X] New hero design
 [X] New hero typography
@@ -10,3 +10,14 @@
 [ ] Add About page
 [X] Edit Nigel Lyons page
 [X] Get Nigel Lyons page back online
+[ ] Tweak heading sizes
+[ ] Replace image handling with non redundant process
+[ ] Make portfolio pages with scroll wider
+[ ] Fix background scroll on imhance
+[X] Fix margins on home page
+[ ] Gray out intructions on imhance/scroll
+[X] Fix margins on postlist page
+[ ] Change highlight color to pink
+[ ] Fix right margin on nav
+[X] Remove Resume link and Back to Top from post navs
+[ ] Increase size of footer headings

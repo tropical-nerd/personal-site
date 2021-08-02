@@ -35,7 +35,7 @@ svg {
   --s3: calc(var(--s2) * var(--scale));
   --s4: calc(var(--s3) * var(--scale));
   --s5: calc(var(--s4) * var(--scale));
-  --body-padding: var(--s-1);
+  --body-padding: var(--s0);
   --main-width: calc(40rem + 2 * var(--body-padding));
   --space: s0;
   --color-background: #FEF9E6;
@@ -69,11 +69,11 @@ svg {
 
 @media screen and (min-width: 480px) {
   :root {
-    --body-padding: var(--s0); } }
+    --body-padding: var(--s1); } }
 
 @media screen and (min-width: 640px) {
   :root {
-    --body-padding: var(--s1); } }
+    --body-padding: var(--s2); } }
 
 @media screen and (min-width: 1024px) {
   html {
@@ -137,12 +137,11 @@ body {
   overflow-x: hidden; }
 
 main {
-  flex-grow: 1;
-  margin-top: var(--s3); }
+  flex-grow: 1; }
   main > :first-child {
     margin-top: 0; }
 
-.site-container, .single-column, .postlist, .post-nav, .header-bar {
+.site-container, .single-column, .post-nav, .header-bar {
   width: 100%;
   max-width: calc(60rem + 2 * var(--body-padding));
   margin-left: auto;
@@ -253,7 +252,7 @@ dd {
   font-size: var(--s1);
   line-height: 1.25;
   font-weight: 600;
-  margin: var(--s0) 0; }
+  margin: var(--s4) 0 var(--s2); }
 
 .post-heading {
   margin: var(--s4) 0 var(--s3); }
@@ -564,7 +563,7 @@ dd {
   .footer-menu {
     --space: var(--s-1); }
   .footer-heading {
-    font-size: 1rem;
+    font-size: 1.25rem;
     margin: var(--s0) 0 var(--s-1);
     color: var(--color-background); }
   .footer-contentinfo {

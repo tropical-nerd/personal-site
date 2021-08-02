@@ -73,26 +73,24 @@
       </nav></div>
     </header><main  class="template-post">
       
-        
+  <article class="single-column">
+    <div class="post-heading">
+      <h1>Fun with Arrays</h1>
+      
+        <a href="https://svelte.dev/repl/805300f5895f4ea89b73ba75de393db8?version=3.16.0">Svelte REPL</a>
+      
+    </div>
 
-<article class="single-column">
-<div class="post-heading">
-  <h1>Fun with Arrays</h1>
-  
-    <a href="https://svelte.dev/repl/805300f5895f4ea89b73ba75de393db8?version=3.16.0">Svelte REPL</a>
-  
-</div>
-
-<section id="svelte-app" class="app app-fun-with-arrays"></section>
+    <section id="svelte-app" class="app app-fun-with-arrays"></section>
 <p><strong>Fun with Arrays</strong> visualizes an array as series of squares and provides buttons to execute some of JavaScript's array methods. I live coded it on stage at #FrontEndParty, a monthly meetup in New Orleans. The talk was an introduction to <a href="https://svelte.dev">Svelte.js</a>, if you are not familiar, it is a component framework similar to Vue, React, or Angular, with the notable difference that it compiles at build time into vanilla JavaScript for smaller bundles and faster execution time.</p>
 <p>In 7 minutes I was able to demonstrate binding data structures to elements and attach Svelte's built in FLIP animations to illustrate the ways in which these functions mutate arrays.</p>
 <p>The app runs extremely fast and ends up weighing less than 10kB, a small fraction of the bundle size that would be required by React, Vue or Angular. The size difference is most notable in small apps, making Svelte an excellent choice for interactive elements embedded in the page, which makes sense as it was initially created by the NY Times for the types of interactive data visualizations that often accompany their news articles. It has some performance gains over React as well. Svelte maintains a dependency graph that only updates the specific parts of the page that have changed. React uses a diffing approach that must compare the entire DOM to the shadow DOM on each update.</p>
 <p>If you would like to see the code or play with it in real time check out the <a href="https://svelte.dev/repl/805300f5895f4ea89b73ba75de393db8?version=3.16.0">Svelte REPL</a>.</p>
 
-</article>
+  </article>
 
-      
-    </main><div class="post-nav">
+    </main>
+  <div class="post-nav">
   
   
     
@@ -106,7 +104,7 @@
     <div class="post-nav-prev">← <a href="/projects/dactyl-nightmare/">Dactyl Nightmare</a></div>
   
 
-  <div class="post-nav-top"><a href="#page-top">Back to top</a> ↑</div>
+  
 
   
     
@@ -116,7 +114,8 @@
     <div class="post-nav-next"><a href="/projects/tetras/">Tetras</a> →</div>
   
 
-</div><footer class="footer">
+</div>
+  <footer class="footer">
   <div class="footer-container">
     <nav class="footer-nav">
       <div class="footer-menu">
@@ -157,7 +156,8 @@
     </div>
     <div class="footer-decoration" role="presentation"></div>
   </div>
-</footer><script defer>
+</footer>
+<script defer>
       document.querySelector('body').classList.remove('no-js');
     </script>
   </body>

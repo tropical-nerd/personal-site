@@ -73,17 +73,15 @@
       </nav></div>
     </header><main  class="template-post">
       
-        
+  <article class="single-column">
+    <div class="post-heading">
+      <h1>Nigel Lyons</h1>
+      
+        <a href="https://nigelyons.video">nigelyons.video</a>
+      
+    </div>
 
-<article class="single-column">
-<div class="post-heading">
-  <h1>Nigel Lyons</h1>
-  
-    <a href="https://nigelyons.video">nigelyons.video</a>
-  
-</div>
-
-<div class="img-scroll imhance">
+    <div class="img-scroll imhance">
       <figure>
         <div class="img-scroll-window-wrap">
           <div class="img-scroll-window" tabindex="0">
@@ -106,10 +104,10 @@
 <p>As a single page site, a CMS would have added a lot of overhead. I could have written the site directly in HTML and CSS, completely forgoing a build step, but I chose to generate the site in Node to gain the benefit of some modern development tools. I used Pug for the templates, Stylus as a CSS preprocessor, Gulp as an asset bundler, and browserSync for live reloading. This stack allowed me to automate repetitive tasks without giving up granular control over the finished product. Pug's mixins were a huge time saver, they allowed me to treat the blocks and video cards as components, where I could pass in the data as a property to generate structured markup.</p>
 <p>The main challenges I faced in creating a truly responsive site were the header design, whitespace management, and arrangement of content blocks. For the header I used to CSS grid to create a vertical version for narrow screens and a horizontal version wider devices. To keep whitespace proportional I made a margin system utilizing CSS custom properties that coordinated changing all the margins on the page by adjusting a few variables. CSS grid proved useful again in intrinsically laying out the video cards in flexible grid, and for rearranging the site layout on larger screen sizes.</p>
 
-</article>
+  </article>
 
-      
-    </main><div class="post-nav">
+    </main>
+  <div class="post-nav">
   
   
     
@@ -123,7 +121,7 @@
     <div class="post-nav-prev">← <a href="/portfolio/sediment-press/">Sediment Press</a></div>
   
 
-  <div class="post-nav-top"><a href="#page-top">Back to top</a> ↑</div>
+  
 
   
     
@@ -133,7 +131,8 @@
     <div class="post-nav-next"><a href="/portfolio/center-staging/">Center Staging</a> →</div>
   
 
-</div><footer class="footer">
+</div>
+  <footer class="footer">
   <div class="footer-container">
     <nav class="footer-nav">
       <div class="footer-menu">
@@ -174,7 +173,8 @@
     </div>
     <div class="footer-decoration" role="presentation"></div>
   </div>
-</footer><script defer>
+</footer>
+<script defer>
       document.querySelector('body').classList.remove('no-js');
     </script>
   </body>

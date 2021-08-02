@@ -86,8 +86,11 @@
       {% endblock %}
     </main>
 
-    {%- include "post-nav.njk" -%}
-    {%- include "footer.njk" -%}
+
+    {%- block footer -%}
+      <div style="margin-top: var(--s3)"></div>
+      {%- include "footer.njk" -%}
+    {%- endblock-%}
 
     <script defer>
       document.querySelector('body').classList.remove('no-js');
