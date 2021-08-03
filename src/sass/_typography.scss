@@ -19,6 +19,14 @@
     font-weight: 900;
 }
 
+@font-face {
+    font-family: 'Tungsten Medium';
+    src:    url("/fonts/Tungsten-Medium.woff2") format("woff2"),
+            url("/fonts/Tungsten-Medium.woff") format("woff");
+
+    font-weight: normal;
+}
+
 $font-size-small: .875rem;
 $font-size-normal: 1rem;
 $font-size-large: 1.25rem;
@@ -33,7 +41,7 @@ $font-size-large: 1.25rem;
     font-weight: var(--font-weight-heading);
 }
 
-@mixin outline-font {
+@mixin outline-shadow-font {
     text-shadow:
         1px 1px 0 var(--color-text),
         -1px -1px 0 var(--color-text),
@@ -42,10 +50,11 @@ $font-size-large: 1.25rem;
         1px 0 0 var(--color-text),
         -1px 0 0 var(--color-text),
         0 1px 0 var(--color-text),
-        0 -1px 0 var(--color-text);
+        0 -1px 0 var(--color-text),
+        3px 3px 0 var(--color-shadow);
 
-    @supports (-webkit-text-stroke: 1px black) {
-        -webkit-text-stroke: 1px var(--color-text);
+    @supports (text-stroke: 1px black) {
+        text-stroke: 1px var(--color-text);
         text-shadow: unset;
     }
 }
@@ -65,48 +74,49 @@ h1, h2, h3 {
 p, ul, ol, dl { margin: var(--s0) 0; }
 
 h1 {
-    font-size: var(--s3);
+    font-size: var(--s4);
     margin: var(--s4) 0 var(--s3);
     color: var(--color-base);
+    text-shadow: 2px 2px var(--color-shadow);
 
-    @include outline-font();
+    @include outline-shadow-font();
 }
 
 h2 {
-    font-size: var(--s2);
+    font-size: var(--s3);
     margin: var(--s3) 0 var(--s2);
 }
 
 h3 {
-    font-size: var(--s1);
+    font-size: var(--s2);
     margin: var(--s2) 0 var(--s1);
 }
 
 h4 {
-    font-size: var(--s0);
+    font-size: var(--s1);
     margin: var(--s1) 0 var(--s0);
     font-weight: 600;
 }
 
 .h3-sub {
     font-family: "system", sans-serif;
-    font-size: var(--s0);
+    font-size: var(--s1);
     font-weight: 600;
     display: block;
     margin-top: var(--s-3);
 }
 
-.link-underline {
-    text-decoration: underline;
-    @supports (text-decoration: underline red 2px) {
-        text-decoration: underline var(--color-base) 2px;
-    }
-}
+// .link-underline {
+//     text-decoration: underline;
+//     @supports (text-decoration: underline red 2px) {
+//         text-decoration: underline var(--color-base) 2px;
+//     }
+// }
 
 a {
     color: var(--color-text);
 
-    @extend .link-underline;
+    // @extend .link-underline;
 }
 
 figcaption {
@@ -153,32 +163,14 @@ dd {
 
 .home-intro {
 
-    &-hi {
-        display: block;
-        font-size: var(--s2);
-        line-height: 1;
-        font-weight: 600;
-        margin: var(--s3) 0 var(--s0);
-        
-    }
-
-    &-name {
-        display: block;
-        @extend .heading-font;
-        font-size: var(--s3);
-        line-height: 1;
-        margin: var(--s1) 0 var(--s0);
-        color: var(--color-base);
-
-        @include outline-font();
-    }
-
     &-desc {
         display: block;
         font-size: var(--s1);
         line-height: 1.25;
         font-weight: 600;
-        margin: var(--s0) 0;
+        margin: var(--s4) auto var(--s2);
+        max-width: 40ch;
+        text-align: center;
     }
 }
 

@@ -1,7 +1,16 @@
 ---
-layout: layouts/base.njk
 templateClass: page-home
 ---
-{{ content | safe }}
+{% extends 'layouts/base.njk' %}
+
+{%- block header -%}
+    {% include 'facehead.njk' %}
+{%- endblock-%}
+
+{%- block content -%}
+    <article>
+        {{ content | safe }}
+    </article>
+{% endblock %}
 
 {# {% include "post-nav.njk" %} #}

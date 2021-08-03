@@ -1,0 +1,24 @@
+---
+title: Portfolio
+slug: portfolio
+layout: layouts/base.njk
+permalink: /portfolio/
+coverImageClass: postlist-cover
+templateClass: template-postlist
+tags: top
+order: 3
+eleventyNavigation:
+  key: portfolio
+  order: 1
+  title: Portfolio
+---
+<article class="site-container">
+  <div class="post-heading">
+    <h1>{{ title }}</h1>
+    <p>The following are case studies of websites I have built for clients.</p>  
+  </div>
+
+  {% set postlist = (collections.portfolio | sortByOrder(true)) %}
+  {% include "postlist.njk" %}
+</article>
+

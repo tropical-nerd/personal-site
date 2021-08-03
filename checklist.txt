@@ -2,6 +2,15 @@
 [ ] Add created-date to projects
 [ ] Change brand color to match resume
 [ ] Add projects with actual interactive js
-[ ] Change menu structure to Websites, Projects, Blog
-[ ] Add sass processing for additional stylesheets
-
+[ ] Change menu structure to Portfolio, Lab, About
+[ ] New home page design
+[ ] Add About page
+[ ] Replace image handling with non redundant process
+[ ] Make portfolio pages with scroll wider
+[ ] Fix background scroll on imhance
+[ ] Gray out intructions on imhance/scroll
+[ ] Change highlight color to pink
+[ ] Fix right margin on nav
+[ ] Restructure main nav
+[ ] Rewrite home page copy for full stack
+[ ] Stabilize hero with javascript

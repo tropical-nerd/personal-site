@@ -1,0 +1,46 @@
+<header class="header header-facehead">
+    <div class="facehead">
+        <div class="facehead-graphix" role="img" aria-label="Vapor wave illustration of face in neon floating above glowing grid, code fades into the background. Text reads: Charles Robertson Design and Code">
+            <div class="facehead-code">
+                {% include 'facehead-code.njk' %}
+            </div>
+            <div class="facehead-gradient"></div>
+            <picture class="facehead-image">
+                <source srcset="/images/facehead-landscape.svg" media="(min-width: 640px)">
+                <source srcset="/images/facehead-portrait.svg">
+                <img src="/images/facehead-landscape.svg" alt="Vapor wave illustration of face in neon floating above glowing grid, code fades into the background.">
+            </picture>
+        </div>
+        <div class="facehead-overlay">
+            <svg class="facehead-title" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 396.8 149" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <defs>
+                    <linearGradient id="gradient-scrawl" gradientTransform="rotate(90)">
+                        <stop offset="0%" stop-color="#FF8833" stop-opacity="1" />
+                        <stop offset="100%" stop-color="#FF33FF" stop-opacity="1" />
+                    </linearGradient>
+                    <filter id="shadow-scrawl">
+                        <feDropShadow dx="0" dy="0" stdDeviation="1" flood-color="#FF33FF" flood-opacity="1"/>
+                        <feDropShadow dx="-2" dy="3" stdDeviation="0.2" flood-color="#000033" flood-opacity="0.8"/>
+                    </filter>
+                    <style>
+                        .cls-1 {
+                            font-size: 109.34px;
+                            font-family: HyperwaveOne, Hyperwave One;
+                            text-transform: uppercase;
+                            fill: url(#gradient-scrawl);
+                        }
+                    </style>
+                </defs>
+                <g filter="url(#shadow-scrawl)">
+                    <text class="cls-1" transform="translate(7.35 100.12) rotate(-9.09)">Charles</text>
+                    <text class="cls-1" transform="translate(40.35 154.44) rotate(-9.09)">Robertson</text>
+                </g>
+            </svg>
+            <div class="facehead-subtitle">Code + Design</div>
+        </div>
+    </div>
+    <div class="header-bar">
+        <a class="header-logo" href="{{ '/' | url }}" title="Home">Charles Robertson</a>
+        {% include 'header-nav.njk' %}
+    </div>
+</header>

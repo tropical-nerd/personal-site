@@ -12,11 +12,12 @@ eleventyNavigation:
   title: Projects
   order: 2
 ---
-<div class="post-heading">
-  <h1>{{ title }}</h1>
-  <p>The following are posts detailing personal web projects.</p>
-</div>
+<article class="site-container">
+  <div class="post-heading">
+    <h1>{{ title }}</h1>
+    <p>The following are posts detailing personal web projects.</p>
+  </div>
 
-{% set postlist = (collections.projects | sortByOrder(true)) %}
-{% include "postlist.njk" %}
-
+  {% set postlist = (collections.projects | sortByOrder(true)) %}
+  {% include "postlist.njk" %}
+</article>

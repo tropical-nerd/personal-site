@@ -8,7 +8,8 @@ templateClass: tmpl-page
     <li><a href="{{ page.url }}" aria-current="page">{{ title }}</a></li>
   </ol>
 </nav> #}
-<h1>{{ title }}</h1>
+<article class="single-column">
+  <h1>{{ title }}</h1>
 
-{{ content | safe }}
-
+  {{ content | safe }}
+</article>
