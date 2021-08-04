@@ -10,7 +10,6 @@
 [ ] Fix background scroll on imhance
 [ ] Gray out intructions on imhance/scroll
 [ ] Change highlight color to pink
-[ ] Fix right margin on nav
 [ ] Restructure main nav
 [ ] Rewrite home page copy for full stack
 [ ] Stabilize hero with javascript

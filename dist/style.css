@@ -141,11 +141,13 @@ main {
   main > :first-child {
     margin-top: 0; }
 
-.site-container, .single-column, .post-nav, .header-bar {
+.site-container, .site-container-padded, .single-column, .post-nav, .header-bar {
   width: 100%;
   max-width: calc(60rem + 2 * var(--body-padding));
   margin-left: auto;
-  margin-right: auto;
+  margin-right: auto; }
+
+.site-container-padded, .single-column, .post-nav {
   padding-left: var(--body-padding);
   padding-right: var(--body-padding); }
 
@@ -158,11 +160,6 @@ main {
   margin-top: var(--s4); }
   .post-nav-top {
     margin: 0 auto; }
-
-@font-face {
-  font-family: Akzidenz Grotesk BQ Super;
-  src: url("/fonts/AkzidenzGroteskBQ-Super.woff2") format("woff2"), url("/fonts/AkzidenzGroteskBQ-Super.woff") format("woff");
-  font-weight: 900; }
 
 @font-face {
   font-family: 'Tungsten Medium';
@@ -418,7 +415,7 @@ dd {
     align-items: flex-end;
     min-height: 2.5em;
     background-color: var(--color-base);
-    padding: 0 var(--s-2) var(--s-2) var(--s-1);
+    padding: var(--s-1) var(--s2) var(--s-2) var(--body-padding);
     font-size: calc(var(--font-size-normal) * 1.5); }
     .header-logo:hover {
       background-color: var(--color-base-light); }
@@ -426,6 +423,7 @@ dd {
     display: flex;
     align-items: flex-end;
     margin-top: var(--s-1);
+    padding-right: var(--body-padding);
     font-size: 0.875rem; }
   .header-nav-list {
     display: inline-block;
@@ -437,7 +435,7 @@ dd {
     .header-nav-item:first-child {
       margin-left: 10%; }
     .header-nav-item:last-child {
-      margin-right: 5%; }
+      margin-right: 0; }
     .header-nav-item + .header-nav-item {
       margin-left: 10%; }
     .header-nav-item:hover {
@@ -479,7 +477,7 @@ dd {
   @media screen and (min-width: 480px) {
     .header-logo {
       font-size: 2rem;
-      padding: var(--s-1) var(--s-1) var(--s-1) var(--s0); }
+      padding: var(--s-1) var(--s-1) var(--s-1) var(--body-padding); }
     .header-nav {
       font-size: 1rem; }
     .header-nav-item {
