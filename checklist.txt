@@ -5,15 +5,12 @@
 [ ] Change menu structure to Portfolio, Lab, About
 [ ] New home page design
 [ ] Add About page
-[ ] Replace image handling with non redundant process
-[ ] Make portfolio pages with scroll wider
 [ ] Fix background scroll on imhance
 [ ] Gray out intructions on imhance/scroll
 [ ] Change highlight color to pink
 [ ] Restructure main nav
 [ ] Rewrite home page copy for full stack
-[ ] Stabilize hero with javascript
-[ ] Integrate Eleventy Image
+[ ] Stabilize hero on mobile with javascript
 [ ] Add deploy script
 [ ] Consider CSS Grid for blog layout
 [ ] Create a code graveyard?

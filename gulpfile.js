@@ -4,7 +4,7 @@
 
 const gulp = require('gulp');
 // const rename = require('gulp-rename');
-const sass = require('gulp-sass');
+const sass = require('gulp-sass')(require('node-sass'));
 const browserSync = require('browser-sync');
 
 // Begin Gulp task definitions
@@ -32,9 +32,7 @@ gulp.task('svg', function() {
 });
 
 // Compile SCSS files to CSS
-sass.compiler = require('node-sass');
-
-gulp.task('sass', function() {
+gulp.task('sass', function(done) {
     return (
         gulp
             .src('src/sass/**/*.scss', {base: 'src/sass/'})
@@ -42,6 +40,7 @@ gulp.task('sass', function() {
             .pipe(gulp.dest('dist'))
             .pipe(browserSync.stream())
     );
+    done();
 });
 
 // JavaScript

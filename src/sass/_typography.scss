@@ -43,8 +43,7 @@ $font-size-large: 1.25rem;
         1px 0 0 var(--color-text),
         -1px 0 0 var(--color-text),
         0 1px 0 var(--color-text),
-        0 -1px 0 var(--color-text),
-        3px 3px 0 var(--color-shadow);
+        0 -1px 0 var(--color-text);
 
     @supports (text-stroke: 1px black) {
         text-stroke: 1px var(--color-text);
