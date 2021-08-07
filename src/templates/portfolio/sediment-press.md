@@ -6,12 +6,12 @@ linkHref: https://sedimentpress.com
 linkText: sedimentpress.com
 order: 1
 cover:
-    slug: sediment-press_cover
+    src: ./src/images/sediment-press_cover.png
     alt: sedimentpress.com homepage
 tags: [WordPress, WooCommerce, Modified Theme, Logo Design]
 scripts: [/js/imhance.js]
 ---
-{% imgScroll 'sediment-press_home', 'Full scrollable homepage of sedimentpress.com' %}
+{% imgScroll src="./src/images/sediment-press_home.png", alt="Full scrollable homepage of sedimentpress.com" %}
 
 Sediment Press is a design and screen printing company I founded in 2012. Primarily an online store and design portfolio, I wanted to make a site with a loose, hand-drawn aesthetic that was functionally polished, with a seamless checkout and integrated payment gateway.
 

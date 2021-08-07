@@ -6,7 +6,7 @@ linkText: cocohost.co/dactylnightmare
 layout: layouts/post.njk
 order: 1
 cover:
-    slug: dactyl-nightmare_cover
+    src: ./src/images/dactyl-nightmare_cover.png
     alt: Dactyl Nightmare
 tags: [ Adventure Game ]
 scripts:

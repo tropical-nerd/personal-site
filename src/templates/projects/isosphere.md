@@ -7,7 +7,7 @@ layout: layouts/post.njk
 order: 2
 tags: [ Canvas Animation ]
 cover:
-    slug: isosphere_cover
+    src: ./src/images/isosphere_cover.png
     alt: Isosphere
 scripts:
     - /js/selectvid.js
@@ -15,4 +15,4 @@ scripts:
 ---
 {% looper 'isosphere', 'An interactive canvas animation of a sphere rendered in isometric perspective.' %}
 
-Content coming soon!
+Content coming very very soon!

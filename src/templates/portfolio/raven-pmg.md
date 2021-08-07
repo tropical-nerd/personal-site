@@ -6,12 +6,12 @@ linkHref: https://ravenpmg.com
 linkText: ravenpmg.com
 order: 4
 cover:
-    slug: raven-pmg_cover
+    src: ./src/images/raven-pmg_cover.png
     alt: ravenpmg.com homepage
 tags: [WordPress, Custom Theme]
 scripts: [/js/imhance.js]
 ---
-{% imgScroll 'raven-pmg_home', 'Full scrollable homepage of ravenpmg.com'%}
+{% imgScroll src="./src/images/raven-pmg_home.png", alt="Full scrollable homepage of ravenpmg.com" %}
 
 Raven needed a site that would showcase their innovativeness in the event design industry. They had a website on Squarespace but it was proving too rigid to fit their content as their company grew. They provided Photoshop comps for a desktop version. From those I designed mobile comps and then a fully responsive, mobile-first theme.
 

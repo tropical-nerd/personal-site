@@ -35,7 +35,7 @@
     <meta name="twitter:site" content="{{ metadata.author.twitter }}" />
     <meta name="twitter:title" content="{{ metadata.title }} :: {{ title }}" />
     <meta name="twitter:description" content="{{ description }}" />
-    <meta name="twitter:image" content="{{ metadata.url }}/images/{{ cover.slug }}_1600.jpg" />
+    <meta name="twitter:image" content="{{ metadata.url }}{% cardImage cover.src %}" />
     <meta name="twitter:image:alt" content="{{ cover.cardAlt or cover.alt }}" />
     {%- endif -%}
 

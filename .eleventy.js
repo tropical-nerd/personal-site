@@ -1,15 +1,68 @@
+const path = require("path");
 const { DateTime } = require("luxon");
 const fs = require("fs");
-const sizeOf = require('image-size');
-const pluginNavigation = require("@11ty/eleventy-navigation");
+// const pluginNavigation = require("@11ty/eleventy-navigation");
 const markdownIt = require("markdown-it");
-const markdownItAnchor = require("markdown-it-anchor");
+// const markdownItAnchor = require("markdown-it-anchor");
+const Image = require("@11ty/eleventy-img");
 
-const imageSizes = [360, 480, 640, 800, 1024, 1280, 1600];
 const looperSizes = [384, 480, 768, 960];
 
+// Eleventy-Img
+async function imageShortcode(shortcodeAttributes) {
+  let metadata = await Image(shortcodeAttributes.src, {
+      widths: shortcodeAttributes.widths || [375, 480, 640, 800, 1024, 1280, 1440, 1600, 1980],
+      formats: ["avif", "webp", "jpeg"],
+      outputDir: "./dist/images/",
+      svgShortCircuit: true,
+      urlPath: "/images/",
+      filenameFormat: function (id, src, width, format, options) {
+          const ext = path.extname(src);
+          const name = path.basename(src, ext);
+
+          return `${name}_${width}w.${format}`;
+      }
+  });
+
+  // Establish attributes with defaults
+  let imageAttributes = {
+      sizes: shortcodeAttributes.sizes || "100vw",
+      loading: shortcodeAttributes.loading || "lazy",
+      decoding: shortcodeAttributes.decoding || "async",
+  };
+
+  // Add any other attributes from the shortcode to the img tag
+  let {src, sizes, loading, decoding, __keywords, ...remainingShortcodeAttributes} = shortcodeAttributes;
+  imageAttributes = {...imageAttributes, ...remainingShortcodeAttributes}
+
+  return Image.generateHTML(metadata, imageAttributes);
+}
+
+
+async function imgScrollShortcode(shortcodeAttributes) {
+  return `<div class="img-scroll imhance">
+    <figure>
+      <div class="img-scroll-window-wrap">
+        <div class="img-scroll-window" tabindex="0">
+          ${await imageShortcode(shortcodeAttributes)}
+        </div>
+      </div>
+      <div class="img-scroll-caption">← Scroll →</div>
+    </figure>
+  </div>`
+};
+
+
+function cardImageShortcode(src) {
+  const ext = path.extname(src);
+  const name = path.basename(src, ext);
+
+  return `/images/${name}_1600w.jpeg`;
+}
+
+
 module.exports = function(eleventyConfig) {
-  eleventyConfig.addPlugin(pluginNavigation);
+  // eleventyConfig.addPlugin(pluginNavigation);
 
   eleventyConfig.setDataDeepMerge(true);
 
@@ -54,67 +107,18 @@ module.exports = function(eleventyConfig) {
     }
   });
 
+  eleventyConfig.addNunjucksAsyncShortcode("image", imageShortcode);
+
+  eleventyConfig.addNunjucksAsyncShortcode("imgScroll", imgScrollShortcode);
+
+  eleventyConfig.addShortcode("cardImage", cardImageShortcode);
+
   eleventyConfig.addShortcode("icon", (iconSlug) => {
     return `<svg class="icon" role="presentation" focusable="false" width="16" height="16" fill="currentColor">
       <use xlink:href="#icon-${iconSlug}" />
     </svg>`
   });
 
-  // Image generator
-  function picture(slug, alt, classes, title) {
-    const srcsetsWebp = new Array(imageSizes.length);
-    const srcsetsJpg = new Array(imageSizes.length);
-    const src = `/images/${slug}_${imageSizes[1]}.jpg`;
-
-    imageSizes.forEach((size, index) => {
-      const webp = `/images/${slug}_${size}.webp`;
-      const jpg = `/images/${slug}_${size}.jpg`;
-
-      if (fs.existsSync('dist/' + webp)) {srcsetsWebp[index] = `${webp} ${size}w`};
-      if (fs.existsSync('dist/' + jpg)) {srcsetsJpg[index] = `${jpg} ${size}w`};
-    });
-    const dimensions = sizeOf('dist' + src);
-    
-    const classAttr = classes ? `class="${classes}"` : '';
-    const titleAttr = title ? `title="${title}"` : '';
-        
-    const output =
-      `<picture>
-          <source srcset="${srcsetsWebp}" type="image/webp">
-          <source srcset="${srcsetsJpg}" type="image/jpeg">
-          <img ${classAttr} src="${src}" srcset="${srcsetsJpg.join(', ')}" ${titleAttr} alt="${alt}" width="${dimensions.width}" height="${dimensions.height}">
-      </picture>`
-
-    return output;
-  }
-
-  // Image shortcode
-  eleventyConfig.addShortcode("image", function(slug, alt, classes, title) {
-    return picture(slug, alt, classes, title)
-  });
-
-  eleventyConfig.addShortcode("postFigure", function(slug, alt, classes, title) {
-    classes = classes ? 'post-figure imhance ' + classes : 'post-figure imhance';
-    return `<div class="${classes}">
-        <figure>
-          ${picture(slug, alt, null, title)}
-        </figure>
-      </div>`
-  });
-
-  eleventyConfig.addShortcode("imgScroll", function(slug, alt, classes, title) {
-    classes = classes ? 'img-scroll imhance ' + classes : 'img-scroll imhance';
-    return `<div class="${classes}">
-      <figure>
-        <div class="img-scroll-window-wrap">
-          <div class="img-scroll-window" tabindex="0">
-            ${picture(slug, alt, null, title)}
-          </div>
-        </div>
-        <div class="img-scroll-caption">← Scroll →</div>
-      </figure>
-    </div>`
-  });
 
   eleventyConfig.addShortcode("looper", function(slug, caption) {
     const sources = new Array;
@@ -146,16 +150,12 @@ module.exports = function(eleventyConfig) {
     </figure>`
   });
 
-  eleventyConfig.addPairedLiquidShortcode('textBlock', function(content) {
-    return `<div class="post-text-block">${content}</div>`;
-  });
-
   
   /* Markdown Overrides */
   let markdownLibrary = markdownIt({
     html: true,
-    breaks: true,
-    linkify: true
+    breaks: true
+    // linkify: true
   })
   eleventyConfig.setLibrary("md", markdownLibrary);
 
@@ -182,7 +182,7 @@ module.exports = function(eleventyConfig) {
       "liquid"
     ],
 
-    markdownTemplateEngine: "liquid",
+    markdownTemplateEngine: "njk",
     htmlTemplateEngine: "njk",
     dataTemplateEngine: "njk",
 

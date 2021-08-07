@@ -81,19 +81,15 @@
     </div>
 
     <div class="img-scroll imhance">
-      <figure>
-        <div class="img-scroll-window-wrap">
-          <div class="img-scroll-window" tabindex="0">
-            <picture>
-          <source srcset="/images/sediment-press_home_360.webp 360w,/images/sediment-press_home_480.webp 480w,/images/sediment-press_home_640.webp 640w,/images/sediment-press_home_800.webp 800w,/images/sediment-press_home_1024.webp 1024w,/images/sediment-press_home_1280.webp 1280w,/images/sediment-press_home_1600.webp 1600w" type="image/webp">
-          <source srcset="/images/sediment-press_home_360.jpg 360w,/images/sediment-press_home_480.jpg 480w,/images/sediment-press_home_640.jpg 640w,/images/sediment-press_home_800.jpg 800w,/images/sediment-press_home_1024.jpg 1024w,/images/sediment-press_home_1280.jpg 1280w,/images/sediment-press_home_1600.jpg 1600w" type="image/jpeg">
-          <img  src="/images/sediment-press_home_480.jpg" srcset="/images/sediment-press_home_360.jpg 360w, /images/sediment-press_home_480.jpg 480w, /images/sediment-press_home_640.jpg 640w, /images/sediment-press_home_800.jpg 800w, /images/sediment-press_home_1024.jpg 1024w, /images/sediment-press_home_1280.jpg 1280w, /images/sediment-press_home_1600.jpg 1600w"  alt="Full scrollable homepage of sedimentpress.com" width="480" height="2437">
-      </picture>
-          </div>
+    <figure>
+      <div class="img-scroll-window-wrap">
+        <div class="img-scroll-window" tabindex="0">
+          <picture><source type="image/avif" srcset="/images/sediment-press_home_375w.avif 375w, /images/sediment-press_home_480w.avif 480w, /images/sediment-press_home_640w.avif 640w, /images/sediment-press_home_800w.avif 800w, /images/sediment-press_home_1024w.avif 1024w" sizes="100vw"><source type="image/webp" srcset="/images/sediment-press_home_375w.webp 375w, /images/sediment-press_home_480w.webp 480w, /images/sediment-press_home_640w.webp 640w, /images/sediment-press_home_800w.webp 800w, /images/sediment-press_home_1024w.webp 1024w" sizes="100vw"><source type="image/jpeg" srcset="/images/sediment-press_home_375w.jpeg 375w, /images/sediment-press_home_480w.jpeg 480w, /images/sediment-press_home_640w.jpeg 640w, /images/sediment-press_home_800w.jpeg 800w, /images/sediment-press_home_1024w.jpeg 1024w" sizes="100vw"><img loading="lazy" decoding="async" alt="Full scrollable homepage of sedimentpress.com" src="/images/sediment-press_home_375w.jpeg" width="1024" height="5199"></picture>
         </div>
-        <div class="img-scroll-caption">← Scroll →</div>
-      </figure>
-    </div>
+      </div>
+      <div class="img-scroll-caption">← Scroll →</div>
+    </figure>
+  </div>
 <p>Sediment Press is a design and screen printing company I founded in 2012. Primarily an online store and design portfolio, I wanted to make a site with a loose, hand-drawn aesthetic that was functionally polished, with a seamless checkout and integrated payment gateway.</p>
 <p>For the e-commerce section WooCommerce had the power and extensibility we needed. The plugin system allowed us to add payments to the site and calculate shipping based on the weight and dimensions of our products. I started with the Storefront theme by WooCommerce because it worked out of the box and I knew it would be well supported. I built a child theme using hooks, actions, and filters to remove unnecessary components from the user interface and reshape it to fit our inventory. Stripe made it easy to add secure credit card payments into our site for streamlined checkout experience.</p>
 <p>For the portfolio I incorporated the <a href="http://miromannino.github.io/Justified-Gallery/">Justified Gallery</a> into the theme and used <a href="https://photoswipe.com/">PhotoSwipe</a> as a touch-enabled light box. I knew it was important to keep the backend easy to use or I would not update it, so I added a custom post type for the portfolio entries and custom taxonomies that enabled category filtering.</p>

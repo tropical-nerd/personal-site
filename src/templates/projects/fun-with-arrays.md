@@ -6,7 +6,7 @@ order: 4
 linkHref: https://svelte.dev/repl/805300f5895f4ea89b73ba75de393db8?version=3.16.0
 linkText: Svelte REPL
 cover:
-    slug: fun-with-arrays_cover
+    src: ./src/images/fun-with-arrays_cover.png
     alt: Fun with Arrays
 tags: [ Svelte.js, Public Speaking ]
 scripts:

@@ -6,12 +6,12 @@ linkHref: https://spruced-dc.com
 linkText: spruced-dc.com
 order: 2
 cover:
-    slug: spruced_cover
+    src: ./src/images/spruced_cover.png
     alt: spruced-dc.com homepage
 tags: [WordPress, Modified Theme]
 scripts: [/js/imhance.js]
 ---
-{% imgScroll 'spruced_home', 'Full scrollable services page of spruced-dc.com' %}
+{% imgScroll src="./src/images/spruced_home.png", alt="Full scrollable services page of spruced-dc.com" %}
 
 Spruced is a personal organization company in Washington, DC. I worked closely with Cary, the owner, on the visual design and content to create a website that would advertise her services and attract clients.
 

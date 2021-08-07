@@ -13,3 +13,12 @@
 [ ] Restructure main nav
 [ ] Rewrite home page copy for full stack
 [ ] Stabilize hero with javascript
+[ ] Integrate Eleventy Image
+[ ] Add deploy script
+[ ] Consider CSS Grid for blog layout
+[ ] Create a code graveyard?
+[ ] Get off Gulp completely?
+[ ] Add open graph card
+[ ] Auto generate post cards
+[ ] Fix hero text spacing and moving margins
+[ ] Reduce height of header?
