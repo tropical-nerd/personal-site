@@ -11,7 +11,7 @@ const looperSizes = [384, 480, 768, 960];
 // Eleventy-Img
 async function imageShortcode(shortcodeAttributes) {
   let metadata = await Image(shortcodeAttributes.src, {
-      widths: shortcodeAttributes.widths || [375, 480, 640, 800, 1024, 1280, 1440, 1600, 1980],
+      widths: shortcodeAttributes.widths || [375, 480, 640, 800], //, 1024, 1280, 1440, 1600, 1980
       formats: ["avif", "webp", "jpeg"],
       outputDir: "./dist/images/",
       svgShortCircuit: true,
@@ -161,6 +161,7 @@ module.exports = function(eleventyConfig) {
 
   // Browsersync Overrides
   eleventyConfig.setBrowserSyncConfig({
+    files: "./dist/*.css",
     callbacks: {
       ready: function(err, browserSync) {
         const content_404 = fs.readFileSync('dist/404.html');

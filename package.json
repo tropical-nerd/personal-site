@@ -3,11 +3,12 @@
   "version": "1.0.0",
   "description": "The web development portfolio of Charles Robertson",
   "scripts": {
-    "build": "npx eleventy",
-    "watch": "npx eleventy --watch",
-    "serve": "npx eleventy --serve",
+    "build": "npx @11ty/eleventy",
+    "watch": "npx @11ty/eleventy --watch",
+    "serve": "npx @11ty/eleventy --serve",
     "debug": "DEBUG=* npx eleventy",
-    "dev": "gulp serve & npx @11ty/eleventy --watch"
+    "dev": "node-sass -w ./src/sass -o ./dist & npx @11ty/eleventy --serve",
+    "sass": "node-sass ./src/sass -o ./dist"
   },
   "repository": {
     "type": "git",
