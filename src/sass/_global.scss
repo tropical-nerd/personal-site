@@ -16,7 +16,7 @@
     --main-width: calc(40rem + 2 * var(--body-padding));
     --space: s0;
 
-    --color-background: #FEF9E6;
+    --color-background: var(--color-background);
     --color-text: #222;
     --color-text-med: #555;
     --color-text-light: #DDD;
