@@ -97,65 +97,65 @@
         }
     }
 
-    @media screen and (min-width: 350px) {
-        display: flex;
-        flex-wrap: wrap;
-        align-items: flex-end;
+//     @media screen and (min-width: 350px) {
+//         display: flex;
+//         flex-wrap: wrap;
+//         align-items: flex-end;
 
-        &-logo {
-            flex-basis: 6.5em;
-            flex-shrink: 1;
-            flex-grow: 3;
-            display: inline-block;
-            width: auto;
-            display: flex;
-            justify-content: start;
-            align-items: flex-end;
-        }
+//         &-logo {
+//             flex-basis: 6.5em;
+//             flex-shrink: 1;
+//             flex-grow: 3;
+//             display: inline-block;
+//             width: auto;
+//             display: flex;
+//             justify-content: start;
+//             align-items: flex-end;
+//         }
 
-        &-nav {
-            flex-basis: 50%;
-            flex-grow: 1;
-            margin-left: var(--s-2);
+//         &-nav {
+//             flex-basis: 50%;
+//             flex-grow: 1;
+//             margin-left: var(--s-2);
             
-        }
+//         }
 
-        &-nav-list {
-            * + * {
-                margin-left: var(--s-2);
-            }
-        }
-    }
+//         &-nav-list {
+//             * + * {
+//                 margin-left: var(--s-2);
+//             }
+//         }
+//     }
 
-    @media screen and (min-width: 480px) {
-        &-logo {
-            font-size: 2rem;
-            padding: var(--s-1) var(--s-1) var(--s-1) var(--body-padding);
-        }
+//     @media screen and (min-width: 480px) {
+//         &-logo {
+//             font-size: 2rem;
+//             padding: var(--s-1) var(--s-1) var(--s-1) var(--body-padding);
+//         }
     
-        &-nav {
-            font-size: $font-size-normal;
-        }
+//         &-nav {
+//             font-size: $font-size-normal;
+//         }
 
-        &-nav-item {
-            margin-left: auto;
+//         &-nav-item {
+//             margin-left: auto;
 
-            a {
-                padding: 0 var(--s-1);
-            }
+//             a {
+//                 padding: 0 var(--s-1);
+//             }
 
-            &-inner {
-                padding: var(--s-1) 0 calc(var(--s-1) - 3px);
-            }
-        }
-    }
+//             &-inner {
+//                 padding: var(--s-1) 0 calc(var(--s-1) - 3px);
+//             }
+//         }
+//     }
 
-    @media screen and (min-width: 640px) {
-        margin-top: var(--s2);
+//     @media screen and (min-width: 640px) {
+//         margin-top: var(--s2);
 
-        &-logo {
-            flex-grow: 2;
-        }
-    }
+//         &-logo {
+//             flex-grow: 2;
+//         }
+//     }
 }
 

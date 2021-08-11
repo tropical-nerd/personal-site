@@ -1,4 +1,8 @@
 <header class="header header-facehead">
+    <div class="header-bar">
+        <a class="header-logo" href="{{ '/' | url }}" title="Home">Charles Robertson</a>
+        {% include 'header-nav.njk' %}
+    </div>
     <div class="facehead">
         <div class="facehead-graphix" role="img" aria-label="Vapor wave illustration of face in neon floating above glowing grid, code fades into the background. Text reads: Charles Robertson Design and Code">
             <div class="facehead-code">
@@ -38,9 +42,5 @@
             </svg>
             <div class="facehead-subtitle">Code + Design</div>
         </div>
-    </div>
-    <div class="header-bar">
-        <a class="header-logo" href="{{ '/' | url }}" title="Home">Charles Robertson</a>
-        {% include 'header-nav.njk' %}
     </div>
 </header>

@@ -13,15 +13,5 @@
     "name": "Charles Robertson",
     "email": "contact@charlesrobertson.io",
     "twitter": "@tropical_nerd"
-  },
-  "navItems": [
-    {
-      "title": "Portfolio",
-      "slug": "portfolio"
-    },
-    {
-      "title": "Projects",
-      "slug": "projects"
-    }
-  ]
+  }
 }

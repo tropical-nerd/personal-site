@@ -15,7 +15,7 @@ scripts: [/js/imhance.js]
 
 Nigel Lyons is an independent video producer in Washington, DC. In 2015, with Sediment Press, I designed his logo, business card and a portfolio site using WordPress. In 2019 I redesigned the site as a static single page that would highlight some of his best work. The main design considerations we had were: 
 
- - Effectively showcasing his video portfolio.
+ - Effectively showcasing his video work.
  - Building a design system based on his existing branding.
  - Rock solid responsive design that looks great on any device.
 

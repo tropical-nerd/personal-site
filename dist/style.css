@@ -454,43 +454,6 @@ dd {
     .header-nav-item-inner {
       padding: var(--s-2) 0 var(--s-2);
       border-bottom: 3px solid var(--color-base); }
-  @media screen and (min-width: 350px) {
-    .header {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: flex-end; }
-      .header-logo {
-        flex-basis: 6.5em;
-        flex-shrink: 1;
-        flex-grow: 3;
-        display: inline-block;
-        width: auto;
-        display: flex;
-        justify-content: start;
-        align-items: flex-end; }
-      .header-nav {
-        flex-basis: 50%;
-        flex-grow: 1;
-        margin-left: var(--s-2); }
-      .header-nav-list * + * {
-        margin-left: var(--s-2); } }
-  @media screen and (min-width: 480px) {
-    .header-logo {
-      font-size: 2rem;
-      padding: var(--s-1) var(--s-1) var(--s-1) var(--body-padding); }
-    .header-nav {
-      font-size: 1rem; }
-    .header-nav-item {
-      margin-left: auto; }
-      .header-nav-item a {
-        padding: 0 var(--s-1); }
-      .header-nav-item-inner {
-        padding: var(--s-1) 0 calc(var(--s-1) - 3px); } }
-  @media screen and (min-width: 640px) {
-    .header {
-      margin-top: var(--s2); }
-      .header-logo {
-        flex-grow: 2; } }
 
 .postlist {
   --item-gap-x: var(--s1);

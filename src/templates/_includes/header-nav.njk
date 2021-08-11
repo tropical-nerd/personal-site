@@ -1,7 +1,7 @@
       <nav class="header-nav">
         <ul class="header-nav-list">
-          {% for navItem in metadata.navItems %}
-            <li class="header-nav-item {%- if (navItem.slug | isActive(page.fileSlug, tags[0])) %} current{% endif %}">
+          {% for navItem in nav.navItems %}
+            <li class="header-nav-item {{ 'active' if navItem.slug in page.url }}">
               <a href="/{{ navItem.slug }}/">
                 <div class="header-nav-item-inner">
                   {{ navItem.title }}

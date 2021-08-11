@@ -1,16 +1,16 @@
 ---
-title: Portfolio
-slug: portfolio
+title: Work
+slug: work
 layout: layouts/base.njk
-permalink: /portfolio/
+permalink: /work/
 coverImageClass: postlist-cover
 templateClass: template-postlist
 tags: top
 order: 3
 eleventyNavigation:
-  key: portfolio
+  key: work
   order: 1
-  title: Portfolio
+  title: Work
 ---
 <article class="site-container-padded">
   <div class="post-heading">
@@ -18,7 +18,7 @@ eleventyNavigation:
     <p>The following are case studies of websites I have built for clients.</p>  
   </div>
 
-  {% set postlist = (collections.portfolio | sortByOrder(true)) %}
+  {% set postlist = (collections.work | sortByOrder(true)) %}
   {% include "postlist.njk" %}
 </article>
 
