@@ -1,0 +1,15 @@
+.home-intro {
+    margin-top: var(--s4);
+    padding: var(--s5) 0;
+    background-color: var(--color-background-2);
+
+    &-desc {
+        display: block;
+        font-size: var(--s1);
+        line-height: 1.25;
+        font-weight: 600;
+        margin: 0 auto;
+        max-width: 40ch;
+        text-align: center;
+    }
+}

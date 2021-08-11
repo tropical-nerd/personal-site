@@ -153,19 +153,6 @@ dd {
     font-size: $font-size-small;    
 }
 
-.home-intro {
-
-    &-desc {
-        display: block;
-        font-size: var(--s1);
-        line-height: 1.25;
-        font-weight: 600;
-        margin: var(--s4) auto var(--s2);
-        max-width: 40ch;
-        text-align: center;
-    }
-}
-
 .post-heading {
     margin: var(--s4) 0 var(--s3);
 

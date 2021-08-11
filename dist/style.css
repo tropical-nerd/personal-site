@@ -39,15 +39,16 @@ svg {
   --main-width: calc(40rem + 2 * var(--body-padding));
   --space: s0;
   --color-background: var(--color-background);
+  --color-background-2: #fdf4d4;
   --color-text: #222;
   --color-text-med: #555;
   --color-text-light: #DDD;
   --color-base-light: rgb(145, 255, 215);
   --color-base: #36FFB4;
   --color-base-dark: rgb(0, 224, 170);
-  --color-accent: #2fabfd;
+  --color-accent: #78c7fc;
   --color-shadow: rgba(0,0,0,.33);
-  --color-focus: rgba(0, 204, 255, .8);
+  --color-focus: rgba(182, 99, 250, 0.8);
   --border-width: 1px;
   --border-radius: var(--s-1);
   --box-shadow-offset-x: var(--s-2);
@@ -67,6 +68,10 @@ svg {
 *:focus, .img-scroll-window-wrap:focus-within, .looper-video:focus-within {
   outline: var(--outline-width) solid var(--color-focus);
   outline-offset: var(--outline-offset); }
+
+.header-bar a:focus {
+  outline: var(--outline-width) solid var(--color-focus);
+  outline-offset: -2px; }
 
 @media screen and (min-width: 480px) {
   :root {
@@ -244,15 +249,6 @@ dd {
 
 .post-nav {
   font-size: 0.875rem; }
-
-.home-intro-desc {
-  display: block;
-  font-size: var(--s1);
-  line-height: 1.25;
-  font-weight: 600;
-  margin: var(--s4) auto var(--s2);
-  max-width: 40ch;
-  text-align: center; }
 
 .post-heading {
   margin: var(--s4) 0 var(--s3); }
@@ -439,6 +435,19 @@ dd {
   .header-nav-item.active .header-nav-item-inner {
     padding-bottom: 0.3em;
     border-bottom: 0.2em solid var(--color-base); }
+
+.home-intro {
+  margin-top: var(--s4);
+  padding: var(--s5) 0;
+  background-color: var(--color-background-2); }
+  .home-intro-desc {
+    display: block;
+    font-size: var(--s1);
+    line-height: 1.25;
+    font-weight: 600;
+    margin: 0 auto;
+    max-width: 40ch;
+    text-align: center; }
 
 .postlist {
   --item-gap-x: var(--s1);

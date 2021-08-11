@@ -17,15 +17,16 @@
     --space: s0;
 
     --color-background: var(--color-background);
+    --color-background-2: #fdf4d4;
     --color-text: #222;
     --color-text-med: #555;
     --color-text-light: #DDD;
     --color-base-light: rgb(145, 255, 215);
     --color-base: #36FFB4;
     --color-base-dark: rgb(0, 224, 170);
-    --color-accent: #2fabfd;
+    --color-accent: #78c7fc;
     --color-shadow: rgba(0,0,0,.33);
-    --color-focus: rgba(0, 204, 255, .8);
+    --color-focus: rgba(182, 99, 250, 0.8); 
 
     --border-width: 1px;
     --border-radius: var(--s-1);
@@ -56,6 +57,11 @@
     outline: var(--outline-width) solid var(--color-focus);
     outline-offset: var(--outline-offset);
     // -moz-outline-radius: .875rem;
+}
+
+.header-bar a:focus {
+    outline: var(--outline-width) solid var(--color-focus);
+    outline-offset: -2px;
 }
 
 @media screen and (min-width: 480px) {

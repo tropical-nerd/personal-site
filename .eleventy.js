@@ -8,6 +8,8 @@ const Image = require("@11ty/eleventy-img");
 
 const looperSizes = [384, 480, 768, 960];
 
+console.log("WARNING: Image srcsets are limited to streamline the build process.")
+
 // Eleventy-Img
 async function imageShortcode(shortcodeAttributes) {
   let metadata = await Image(shortcodeAttributes.src, {
