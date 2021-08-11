@@ -45,6 +45,7 @@ svg {
   --color-base-light: rgb(145, 255, 215);
   --color-base: #36FFB4;
   --color-base-dark: rgb(0, 224, 170);
+  --color-accent: #2fabfd;
   --color-shadow: rgba(0,0,0,.33);
   --color-focus: rgba(0, 204, 255, .8);
   --border-width: 1px;
@@ -60,7 +61,7 @@ svg {
   --font-family-body: -system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol;
   --font-family-heading: Tungsten Medium, Helvetica Neue Condensed, Arial Narrow, Arial, sans-serif;
   --font-weight-body: normal;
-  --font-weight-heading: 900;
+  --font-weight-heading: 400;
   --duration: 0.2s; }
 
 *:focus, .img-scroll-window-wrap:focus-within, .looper-video:focus-within {
@@ -404,41 +405,40 @@ dd {
 
 .header-bar {
   display: flex;
-  flex-wrap: wrap;
-  align-items: flex-start; }
+  flex-wrap: wrap; }
   .header-bar a {
     display: block;
     text-decoration: none;
     color: var(--color-text); }
+    .header-bar a:hover {
+      background-color: var(--color-accent); }
 
 .header-logo {
-  padding: var(--body-padding) calc(var(--body-padding) + .25em) 0.8rem var(--body-padding);
+  padding: .53em .78em;
   background-color: var(--color-base);
   font-size: 1.5rem;
   line-height: 1; }
 
 .header-nav {
   flex-basis: 0;
+  display: flex;
   line-height: 1;
-  padding: var(--body-padding);
   margin-left: auto; }
 
 .header-nav-list {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   margin: 0; }
-  .header-nav-list * + * {
-    margin-left: var(--body-padding); }
 
 .header-nav-item {
-  padding: 0 .5em; }
-  .header-nav-item .header-nav-item-inner {
-    border-bottom: 0.2em solid transparent; }
+  display: flex; }
+  .header-nav-item a {
+    padding: 0.5em var(--s0) 0; }
+  .header-nav-item-inner {
+    padding: 0.5em 0 0.5em; }
   .header-nav-item.active .header-nav-item-inner {
+    padding-bottom: 0.3em;
     border-bottom: 0.2em solid var(--color-base); }
-
-.header-nav-item-inner {
-  padding: 0.5em 0 0.3em; }
 
 .postlist {
   --item-gap-x: var(--s1);
