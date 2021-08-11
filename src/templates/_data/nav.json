@@ -1,0 +1,16 @@
+{
+  "navItems": [
+        {
+        "title": "Work",
+        "slug": "work"
+        },
+        {
+        "title": "Lab",
+        "slug": "lab"
+        },
+        {
+        "title": "About",
+        "slug": "about"
+        }
+    ]
+}
