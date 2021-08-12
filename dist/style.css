@@ -46,7 +46,7 @@ svg {
   --color-base-light: rgb(145, 255, 215);
   --color-base: #36FFB4;
   --color-base-dark: rgb(0, 224, 170);
-  --color-accent: #78c7fc;
+  --color-accent: #ff8bd1;
   --color-shadow: rgba(0,0,0,.33);
   --color-focus: rgba(182, 99, 250, 0.8);
   --border-width: 1px;
@@ -420,6 +420,9 @@ dd {
   display: flex;
   line-height: 1;
   margin-left: auto; }
+  @media screen and (min-width: 480px) {
+    .header-nav {
+      margin-right: var(--s0); } }
 
 .header-nav-list {
   display: flex;
@@ -437,9 +440,7 @@ dd {
     border-bottom: 0.2em solid var(--color-base); }
 
 .home-intro {
-  margin-top: var(--s4);
-  padding: var(--s5) 0;
-  background-color: var(--color-background-2); }
+  padding: var(--s5) 0; }
   .home-intro-desc {
     display: block;
     font-size: var(--s1);

@@ -28,6 +28,10 @@
         display: flex;
         line-height: 1;
         margin-left: auto;
+
+        @media screen and (min-width: 480px) {
+            margin-right: var(--s0);
+        }
     }
 
     &-nav-list {
