@@ -5,6 +5,7 @@ const fs = require("fs");
 const markdownIt = require("markdown-it");
 // const markdownItAnchor = require("markdown-it-anchor");
 const Image = require("@11ty/eleventy-img");
+const { config } = require("process");
 
 const looperSizes = [384, 480, 768, 960];
 
@@ -67,6 +68,10 @@ module.exports = function(eleventyConfig) {
   // eleventyConfig.addPlugin(pluginNavigation);
 
   eleventyConfig.setDataDeepMerge(true);
+
+  eleventyConfig.addFilter("asPostDate", (dateObj) => {
+    return DateTime.fromJSDate(dateObj).toLocaleString(DateTime.DATE_MED);
+  });
 
   eleventyConfig.addFilter("getPostIndexFromSlug", (postlist, slug) => {
     return postlist.findIndex(post => post.data.slug === slug);

@@ -1,6 +1,18 @@
+.home-section {
+    padding-top: var(--s5);
+    padding-bottom: var(--s5);
+
+    h2 {
+        margin-top:0
+    }
+    
+    &-work {
+        background-color: var(--color-background-2);
+    }
+}
+
 .home-intro {
     // margin-top: var(--s4);
-    padding: var(--s5) 0;
     // background-color: var(--color-background-2);
 
     &-desc {

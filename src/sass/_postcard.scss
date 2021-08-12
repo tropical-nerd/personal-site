@@ -1,0 +1,32 @@
+.postcard {
+    width: 20rem;
+    background-color: var(--color-background);
+
+    border-radius: var(--border-radius);
+    border: var(--border-width) solid var(--color-text);
+    overflow: hidden;
+
+    h3 {
+        margin: 0;
+    }
+
+    &:focus {
+        -moz-outline-radius: var(--outline-radius);
+    }
+
+    &-info {
+        padding: var(--s0)
+
+    }
+
+    &-date {
+        font-style: italic;
+        color: var(--color-text-med)
+    }
+
+    &-tags {
+        font-size: $font-size-small;
+        margin-bottom: 0;
+        text-transform: lowercase;
+    }
+}
