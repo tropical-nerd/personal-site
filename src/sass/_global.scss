@@ -25,11 +25,13 @@
     --color-base: #36FFB4;
     --color-base-dark: rgb(0, 224, 170);
     --color-accent: #ff8bd1;
+    --color-accent-2: rgb(182, 99, 250);
+    --color-accent-3: #ffac8b;
     --color-shadow: rgba(0,0,0,.33);
     --color-focus: rgba(182, 99, 250, 0.8); 
 
     --border-width: 1px;
-    --border-radius: var(--s-1);
+    --border-radius: var(--s-3);
     --box-shadow-offset-x: var(--s-2);
     --box-shadow-offset-y: var(--s-2);
     --outline-width: var(--s-4);

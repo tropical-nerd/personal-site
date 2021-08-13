@@ -111,6 +111,31 @@ a {
     // @extend .link-underline;
 }
 
+.block-link-colors {
+    color: var(--color-text);
+    background-color: var(--color-background);
+    // &:visited {
+    //     background-color: var(--color-accent-2);
+    // }
+
+    &:hover {
+        background-color: var(--color-base);
+    }
+
+    &:active {
+        background-color: var(--color-base-light);
+    }
+}
+
+.block-link {
+    @extend .block-link-colors;
+    display: inline-block;
+    text-decoration: none;
+    padding: var(--s-1) var(--s0);
+    border: 1px solid var(--color-text);
+    border-radius: var(--border-radius);
+}
+
 figcaption {
     font-size: $font-size-small;
     text-align: center;

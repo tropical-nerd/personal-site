@@ -14,32 +14,49 @@ stylesheets: [facehead.css]
 <h1 class="visually-hidden">Charles Robertson Code and Design</h1>
 
 <section class="home-section home-intro">
-    <p class="home-intro-desc site-container-padded">I am a <strong>designer</strong> and <strong>developer</strong> who builds software for the web.</p>
-    <a href="/about" class="home-section-link">About</a>
+    <p class="home-intro-desc site-container-padded">I am a <strong>designer</strong> and <strong>developer</strong> who really likes the web. I like reading about it, talking about it, and building things to go on it.</p>
+    <div class="home-section-link-wrap">
+        <a href="/about" class="home-section-link">About</a>
+    </div>
 </section>
-<section class="home-section home-section-work site-container-padded">
-    <h2>Latest Work</h2>
-    {% set postlist = (collections.work | sortByOrder(true)) %}
-    {% set post = postlist[0] %}
-    <div class="postcard">
-        {% image src=post.data.cover.src, alt=post.data.cover.alt, class="postcard-image" %}
-        
-        <div class="postcard-info">
-            <h3 class="postcard-title">{{ post.data.title }}</h3>
-            <time class="postcard-date">{{ post.data.postCreated | asPostDate }}</time>
-            <p class="postcard-description">{{ post.data.description }}</p>
+<section class="home-section home-section-work">
+    <div class="home-section-inner site-container-padded">
+        <h2>Latest Work</h2>
+        <div class="postcards">
+            {% set postlist = (collections.work | sortByOrder(true)) %}
+            {% set post = postlist[0] %}
+            <div class="postcard">
+                <div class="postcard-image">
+                    {% image src=post.data.cover.src, alt=post.data.cover.alt %}
+                </div>
+                <div class="postcard-info">
+                    <div class="postcard-info-inner">
+                        <h3 class="postcard-title">{{ post.data.linkText }}</h3>
+                        {# <time class="postcard-date">{{ post.data.postCreated | asPostDate }}</time> #}
+                        <p class="postcard-description">{{ post.data.description }}</p>
 
-            {%- if (post.data.tags.length > 1) %}
-            <p class="postcard-tags">tags: 
-                {% for tag in post.data.tags %}
-                {%- if tag !== "work" and tag !== "lab" -%}
-                <span class="postcard-tag">
-                    {{ tag }}{% if not loop.last %}, {% endif %}
-                </span>
-                {%- endif -%}
-                {% endfor %}
-            {% endif %}
-            </p>
+                        {# {%- if (post.data.tags.length > 1) %}
+                        <div class="postcard-tags">tags: 
+                            {% for tag in post.data.tags %}
+                            {%- if tag !== "work" and tag !== "lab" -%}
+                            <span class="postcard-tag">
+                                {{ tag }}{% if not loop.last %}, {% endif %}
+                            </span>
+                            {%- endif -%}
+                            {% endfor %}
+                        </div>
+                        {% endif %} #}
+
+                    </div>
+                    <div class="postcard-links">
+                        <a href="{{ post.data.linkHref }}" class="postcard-link">Website</a>
+                        <a href="{{ post.filePathStem }}" class="postcard-link">Post</a>
+                    </div>
+                </div>
+            </div>
         </div>
+    </div>
+    <div class="home-section-link-wrap">
+        <a href="/work" class="home-section-link">Work</a>
     </div>
 </section>

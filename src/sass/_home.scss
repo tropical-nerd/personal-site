@@ -1,6 +1,6 @@
 .home-section {
-    padding-top: var(--s5);
-    padding-bottom: var(--s5);
+    padding-top: var(--s3);
+    padding-bottom: var(--s3);
 
     h2 {
         margin-top:0
@@ -8,6 +8,21 @@
     
     &-work {
         background-color: var(--color-background-2);
+    }
+
+    &-link-wrap {
+        @extend .site-container-padded;
+        text-align: right;
+        margin-top: var(--s3);
+    }
+
+    &-link {
+        @extend .block-link;
+        display: inline-block;
+        
+        &::after {
+            content: " \2192";
+        }
     }
 }
 
@@ -20,8 +35,9 @@
         font-size: var(--s1);
         line-height: 1.25;
         font-weight: 600;
-        margin: 0 auto;
+        margin: var(--s3) auto 0;
         max-width: 40ch;
         text-align: center;
+        // padding: var(--s4) 0;
     }
 }
