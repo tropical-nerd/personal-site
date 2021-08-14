@@ -1,11 +1,9 @@
       <nav class="header-nav">
         <ul class="header-nav-list">
           {% for navItem in nav.navItems %}
-            <li class="header-nav-item {{ 'active' if navItem.slug in page.url }}">
+            <li class="header-nav-item {{ 'current' if navItem.slug in page.url }}">
               <a href="/{{ navItem.slug }}/">
-                <div class="header-nav-item-inner">
-                  {{ navItem.title }}
-                </div>
+                {{ navItem.title }}
               </a>
             </li>
           {% endfor %}

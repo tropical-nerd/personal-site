@@ -1,10 +1,13 @@
 .header {
     &-bar {
-        @extend .site-container;
-        display: flex;
-        flex-wrap: wrap;
         border-top: var(--border-default);
         border-bottom: var(--border-default);
+    }
+
+    &-bar-inner {
+        display: flex;
+        flex-wrap: wrap;
+        @extend .site-container;
     }
 
     &-bar-link {
@@ -17,10 +20,15 @@
         @extend .header-bar-link;
         @extend .heading-font;
         padding: .53em .78em;
-        font-size: 1.5rem;
+        font-size: 1.25rem;
         line-height: 1;
         background-color: var(--color-base);
         border-right: var(--border-default);
+        border-left: var(--border-default);
+
+        @media screen and (min-width: 480px) {
+            font-size: 1.5rem;
+        }
     }
 
     &-nav {
@@ -28,9 +36,16 @@
         display: flex;
         line-height: 1;
         margin-left: auto;
+        font-size: .875rem;
 
         @media screen and (min-width: 480px) {
-            margin-right: var(--s0);
+            // margin-right: var(--s0);
+            font-size: 1rem;
+        }
+
+        a {
+            @extend .header-bar-link;
+            padding: 1.125em var(--s0) 0;
         }
     }
 
@@ -40,9 +55,6 @@
         margin: 0;
     }
 
-    $nav-item-border-bottom: .2em;
-    $nav-item-padding-vert: .5em;
-
     &-nav-item {
         display: flex;
         border-left: var(--border-default);
@@ -51,20 +63,9 @@
             border-right: var(--border-default);
         }
 
-        a {
-            @extend .header-bar-link;
-            padding: .5em var(--s0) 0;
-        }
-
-        &-inner {
-            padding: $nav-item-padding-vert 0 $nav-item-padding-vert;
-        }
-
-        &.active {
-            .header-nav-item-inner {
-                padding-bottom: $nav-item-padding-vert - $nav-item-border-bottom;
-                border-bottom: $nav-item-border-bottom solid var(--color-base);
-            }
+        &.current a {
+            @extend .block-link-colors;
+            background-color: var(--color-base);
         }
     }
 }
