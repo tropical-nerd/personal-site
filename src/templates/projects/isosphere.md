@@ -1,8 +1,8 @@
 ---
 title: Isosphere
 slug: isosphere
-linkHref: https://codepen.io/tr0pical1nternet/pen/rqPZwq
-linkText: codepen.io/tr0pical1nternet/pen/rqPZwq
+href: https://codepen.io/tr0pical1nternet/pen/rqPZwq
+text: CodePen
 layout: layouts/post.njk
 order: 2
 tags: [ Canvas Animation ]

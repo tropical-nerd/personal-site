@@ -2,8 +2,9 @@
 title: Spruced
 slug: spruced
 layout: layouts/post.njk
-linkHref: https://spruced-dc.com
-linkText: spruced-dc.com
+link:
+    href: https://spruced-dc.com
+    text: Website
 order: 2
 cover:
     src: ./src/images/spruced_cover.png

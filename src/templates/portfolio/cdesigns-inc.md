@@ -2,8 +2,9 @@
 title: CDesigns Inc.
 slug: cdesigns-inc
 layout: layouts/post.njk
-linkHref: https://cdesignsinc.com
-linkText: cdesignsinc.com
+link:
+    href: https://cdesignsinc.com
+    text: Website
 order: 3
 cover:
     src: ./src/images/cdesigns-inc_cover.png

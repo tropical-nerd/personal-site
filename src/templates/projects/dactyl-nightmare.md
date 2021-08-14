@@ -1,8 +1,9 @@
 ---
 title: Dactyl Nightmare
 slug: dactyl-nightmare
-linkHref: https://cocohost.co/dactylnightmare
-linkText: cocohost.co/dactylnightmare
+link:
+    href: https://cocohost.co/dactylnightmare
+    text: Website
 layout: layouts/post.njk
 order: 1
 cover:

@@ -1,8 +1,9 @@
 ---
 title: Tetras
 slug: tetras
-linkHref: https://cocohost.co/tetras
-linkText: cocohost.co/tetras
+link:
+    href: https://cocohost.co/tetras
+    text: Demo
 layout: layouts/post.njk
 order: 3
 tags: [Snap.svg, SVG Animation]

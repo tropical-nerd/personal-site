@@ -2,8 +2,9 @@
 title: Sediment Press
 slug: sediment-press
 layout: layouts/post.njk
-linkHref: https://sedimentpress.com
-linkText: sedimentpress.com
+link:
+    href: https://sedimentpress.com
+    text: Website
 order: 1
 cover:
     src: ./src/images/sediment-press_cover.png

@@ -22,8 +22,8 @@
 
         </div>
         <div class="postcard-links">
-            {% if post.data.codeHref %}<a href="{{ post.data.codeHref }}" class="postcard-link">Code</a>{% endif %}
-            {% if post.data.linkHref %}<a href="{{ post.data.linkHref }}" class="postcard-link">Website</a>{% endif %}
+            {# {% if post.data.codeHref %}<a href="{{ post.data.codeHref }}" class="postcard-link">Code</a>{% endif %} #}
+            {% if post.data.link.href %}<a href="{{ post.data.link.href }}" class="postcard-link">{{ post.data.link.text }}</a>{% endif %}
             <a href="{{ post.filePathStem }}" class="postcard-link">Post</a>
         </div>
     </div>

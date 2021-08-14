@@ -2,8 +2,9 @@
 title: Nigel Lyons
 slug: nigel-lyons
 layout: layouts/post.njk
-linkHref: https://nigelyons.video
-linkText: nigelyons.video
+link: 
+    href: https://nigelyons.video
+    text: Website
 siteCreated: 2018-03-04
 postCreated: 2019-06-10
 postModified: 2021-08-01
