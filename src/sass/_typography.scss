@@ -120,11 +120,11 @@ a {
     // }
 
     &:hover {
-        background-color: var(--color-base);
+        background-color: var(--color-base-light);
     }
 
     &:active {
-        background-color: var(--color-base-light);
+        background-color: var(--color-base);
     }
 }
 

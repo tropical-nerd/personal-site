@@ -49,9 +49,11 @@ svg {
   --color-accent: #ff8bd1;
   --color-accent-2: rgb(182, 99, 250);
   --color-accent-3: #ffac8b;
+  --color-border: #222;
   --color-shadow: rgba(0,0,0,.33);
   --color-focus: rgba(182, 99, 250, 0.8);
   --border-width: 1px;
+  --border-default: var(--border-width) solid var(--color-border);
   --border-radius: var(--s-3);
   --box-shadow-offset-x: var(--s-2);
   --box-shadow-offset-y: var(--s-2);
@@ -223,13 +225,13 @@ h4, dt {
 a {
   color: var(--color-text); }
 
-.block-link-colors, .block-link, .home-section-link, .postcard-link {
+.block-link-colors, .block-link, .home-section-link, .postcard-link, .header-bar-link, .header-logo, .header-nav-item a {
   color: var(--color-text);
   background-color: var(--color-background); }
-  .block-link-colors:hover, .block-link:hover, .home-section-link:hover, .postcard-link:hover {
-    background-color: var(--color-base); }
-  .block-link-colors:active, .block-link:active, .home-section-link:active, .postcard-link:active {
+  .block-link-colors:hover, .block-link:hover, .home-section-link:hover, .postcard-link:hover, .header-bar-link:hover, .header-logo:hover, .header-nav-item a:hover {
     background-color: var(--color-base-light); }
+  .block-link-colors:active, .block-link:active, .home-section-link:active, .postcard-link:active, .header-bar-link:active, .header-logo:active, .header-nav-item a:active {
+    background-color: var(--color-base); }
 
 .block-link, .home-section-link, .postcard-link {
   display: inline-block;
@@ -419,19 +421,20 @@ dd {
 
 .header-bar {
   display: flex;
-  flex-wrap: wrap; }
-  .header-bar a {
-    display: block;
-    text-decoration: none;
-    color: var(--color-text); }
-    .header-bar a:hover {
-      background-color: var(--color-accent); }
+  flex-wrap: wrap;
+  border-top: var(--border-default);
+  border-bottom: var(--border-default); }
+
+.header-bar-link, .header-logo, .header-nav-item a {
+  display: block;
+  text-decoration: none; }
 
 .header-logo {
   padding: .53em .78em;
-  background-color: var(--color-base);
   font-size: 1.5rem;
-  line-height: 1; }
+  line-height: 1;
+  background-color: var(--color-base);
+  border-right: var(--border-default); }
 
 .header-nav {
   flex-basis: 0;
@@ -448,7 +451,10 @@ dd {
   margin: 0; }
 
 .header-nav-item {
-  display: flex; }
+  display: flex;
+  border-left: var(--border-default); }
+  .header-nav-item:last-child {
+    border-right: var(--border-default); }
   .header-nav-item a {
     padding: 0.5em var(--s0) 0; }
   .header-nav-item-inner {

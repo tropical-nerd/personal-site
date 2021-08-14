@@ -3,24 +3,24 @@
         @extend .site-container;
         display: flex;
         flex-wrap: wrap;
+        border-top: var(--border-default);
+        border-bottom: var(--border-default);
+    }
 
-        a {
-            display: block;
-            text-decoration: none;
-            color: var(--color-text);
-
-            &:hover {
-                background-color: var(--color-accent);
-            }
-        }
+    &-bar-link {
+        display: block;
+        text-decoration: none;
+        @extend .block-link-colors;
     }
 
     &-logo {
-        padding: .53em .78em;
-        background-color: var(--color-base);
+        @extend .header-bar-link;
         @extend .heading-font;
+        padding: .53em .78em;
         font-size: 1.5rem;
         line-height: 1;
+        background-color: var(--color-base);
+        border-right: var(--border-default);
     }
 
     &-nav {
@@ -45,8 +45,14 @@
 
     &-nav-item {
         display: flex;
+        border-left: var(--border-default);
+
+        &:last-child {
+            border-right: var(--border-default);
+        }
 
         a {
+            @extend .header-bar-link;
             padding: .5em var(--s0) 0;
         }
 
