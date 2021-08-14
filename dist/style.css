@@ -236,7 +236,8 @@ a {
   text-decoration: none;
   padding: var(--s-1) var(--s0);
   border: 1px solid var(--color-text);
-  border-radius: var(--border-radius); }
+  border-radius: var(--border-radius);
+  outline-offset: -2px; }
 
 figcaption {
   font-size: 0.875rem;
@@ -461,8 +462,6 @@ dd {
   padding-bottom: var(--s3); }
   .home-section h2 {
     margin-top: 0; }
-  .home-section-work {
-    background-color: var(--color-background-2); }
   .home-section-link-wrap {
     text-align: right;
     margin-top: var(--s3); }
@@ -480,15 +479,29 @@ dd {
   max-width: 40ch;
   text-align: center; }
 
+.home-section-work {
+  background-color: var(--color-background-2); }
+  .home-section-work .home-section-link-wrap {
+    margin-top: calc(var(--s3) - var(--s2)); }
+
+.home-postcards {
+  display: grid;
+  grid-template-columns: repeat(3, 16rem) calc(var(--body-padding) - var(--s1));
+  grid-gap: var(--s1);
+  max-width: calc(60rem + 2 * var(--body-padding));
+  margin: 0 auto;
+  padding-left: var(--body-padding);
+  padding-bottom: var(--s2);
+  overflow-x: scroll; }
+
 .postcard {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   background-color: var(--color-background);
   border-radius: var(--border-radius);
   border: var(--border-width) solid var(--color-text);
   overflow: hidden; }
   .postcard-image {
-    flex-basis: 20rem;
     flex-grow: 1; }
   .postcard-info {
     flex-basis: 0;
@@ -501,12 +514,17 @@ dd {
     flex-direction: column;
     padding: var(--s0); }
   .postcard-title {
-    font-size: var(--s2);
+    font-family: var(--font-family-body);
+    font-size: 1.25rem;
+    font-weight: bold;
     margin: 0; }
   .postcard-date {
     font-size: 0.875rem;
     font-style: italic;
     color: var(--color-text-med); }
+  .postcard-description {
+    margin-bottom: auto;
+    font-size: 0.875rem; }
   .postcard-tags {
     font-size: 0.875rem;
     margin-top: auto;
@@ -519,8 +537,8 @@ dd {
     border-top: 1px solid var(--color-text);
     border-left: 1px solid var(--color-text); }
   .postcard-link {
-    font-size: 0.875rem;
-    padding: var(--s-3) var(--s0);
+    font-size: 0.75rem;
+    padding: var(--s-3) var(--s-1);
     border-radius: 0;
     border: none;
     border-right: 1px solid var(--color-text); }

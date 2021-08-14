@@ -20,6 +20,7 @@
     font-weight: normal;
 }
 
+$font-size-xsmall: .75rem;
 $font-size-small: .875rem;
 $font-size-normal: 1rem;
 $font-size-large: 1.25rem;
@@ -134,6 +135,9 @@ a {
     padding: var(--s-1) var(--s0);
     border: 1px solid var(--color-text);
     border-radius: var(--border-radius);
+
+    // outline: var(--outline-width) solid var(--color-focus);
+    outline-offset: -2px;
 }
 
 figcaption {

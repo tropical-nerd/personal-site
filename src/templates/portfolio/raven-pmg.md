@@ -8,6 +8,7 @@ order: 4
 cover:
     src: ./src/images/raven-pmg_cover.png
     alt: ravenpmg.com homepage
+description: Website for Raven, an event production company in New Orleans
 tags: [WordPress, Custom Theme]
 scripts: [/js/imhance.js]
 ---

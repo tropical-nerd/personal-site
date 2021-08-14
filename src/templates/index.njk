@@ -20,40 +20,17 @@ stylesheets: [facehead.css]
     </div>
 </section>
 <section class="home-section home-section-work">
-    <div class="home-section-inner site-container-padded">
-        <h2>Latest Work</h2>
-        <div class="postcards">
-            {% set postlist = (collections.work | sortByOrder(true)) %}
-            {% set post = postlist[0] %}
-            <div class="postcard">
-                <div class="postcard-image">
-                    {% image src=post.data.cover.src, alt=post.data.cover.alt %}
-                </div>
-                <div class="postcard-info">
-                    <div class="postcard-info-inner">
-                        <h3 class="postcard-title">{{ post.data.linkText }}</h3>
-                        {# <time class="postcard-date">{{ post.data.postCreated | asPostDate }}</time> #}
-                        <p class="postcard-description">{{ post.data.description }}</p>
-
-                        {# {%- if (post.data.tags.length > 1) %}
-                        <div class="postcard-tags">tags: 
-                            {% for tag in post.data.tags %}
-                            {%- if tag !== "work" and tag !== "lab" -%}
-                            <span class="postcard-tag">
-                                {{ tag }}{% if not loop.last %}, {% endif %}
-                            </span>
-                            {%- endif -%}
-                            {% endfor %}
-                        </div>
-                        {% endif %} #}
-
-                    </div>
-                    <div class="postcard-links">
-                        <a href="{{ post.data.linkHref }}" class="postcard-link">Website</a>
-                        <a href="{{ post.filePathStem }}" class="postcard-link">Post</a>
-                    </div>
-                </div>
-            </div>
+    <div class="home-section-inner">
+        <h2 class="site-container-padded">Latest Work</h2>
+        <div class="home-postcards">
+            {%- set postlist = (collections.work | sortByOrder(true)) %}
+            {%- set post = postlist[0] %}
+            {%- include "postcard.njk" %}
+            {%- set post = postlist[1] %}
+            {%- include "postcard.njk" %}
+            {%- set post = postlist[2] %}
+            {%- include "postcard.njk" %}
+            <div></div>
         </div>
     </div>
     <div class="home-section-link-wrap">

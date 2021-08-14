@@ -1,0 +1,30 @@
+<div class="postcard">
+    <div class="postcard-image">
+        {% image src=post.data.cover.src, alt=post.data.cover.alt %}
+    </div>
+    <div class="postcard-info">
+        <div class="postcard-info-inner">
+            <h3 class="postcard-title">{{ post.data.linkText }}</h3>
+            {# <time class="postcard-date">{{ post.data.postCreated | asPostDate }}</time> #}
+            <p class="postcard-description">{{ post.data.description }}</p>
+
+            {# {%- if (post.data.tags.length > 1) %}
+            <div class="postcard-tags">tags: 
+                {% for tag in post.data.tags %}
+                {%- if tag !== "work" and tag !== "lab" -%}
+                <span class="postcard-tag">
+                    {{ tag }}{% if not loop.last %}, {% endif %}
+                </span>
+                {%- endif -%}
+                {% endfor %}
+            </div>
+            {% endif %} #}
+
+        </div>
+        <div class="postcard-links">
+            {% if post.data.codeHref %}<a href="{{ post.data.codeHref }}" class="postcard-link">Code</a>{% endif %}
+            {% if post.data.linkHref %}<a href="{{ post.data.linkHref }}" class="postcard-link">Website</a>{% endif %}
+            <a href="{{ post.filePathStem }}" class="postcard-link">Post</a>
+        </div>
+    </div>
+</div>

@@ -8,6 +8,7 @@ order: 5
 cover:
     src: ./src/images/center-staging_cover.png
     alt: centerstaging.net homepage
+description: Website for Center Staging in New Orleans
 tags: [Wordpress, Custom Theme, Logo Design]
 scripts: [/js/imhance.js]
 ---

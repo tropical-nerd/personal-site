@@ -3,11 +3,7 @@
     padding-bottom: var(--s3);
 
     h2 {
-        margin-top:0
-    }
-    
-    &-work {
-        background-color: var(--color-background-2);
+        margin-top: 0;
     }
 
     &-link-wrap {
@@ -40,4 +36,23 @@
         text-align: center;
         // padding: var(--s4) 0;
     }
+}
+
+.home-section-work {
+    background-color: var(--color-background-2);
+
+    .home-section-link-wrap {
+        margin-top: calc(var(--s3) - var(--s2));
+    }
+}
+
+.home-postcards {
+    display: grid;
+    grid-template-columns: repeat(3, 16rem) calc(var(--body-padding) - var(--s1)); // Hack for Firefox ignoring padding on scroll elements
+    grid-gap: var(--s1);
+    max-width: calc(60rem + 2 * var(--body-padding));
+    margin: 0 auto;
+    padding-left: var(--body-padding);
+    padding-bottom: var(--s2);
+    overflow-x: scroll;
 }

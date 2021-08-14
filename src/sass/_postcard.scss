@@ -1,13 +1,12 @@
 .postcard {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
     background-color: var(--color-background);
     border-radius: var(--border-radius);
     border: var(--border-width) solid var(--color-text);
     overflow: hidden;
 
     &-image {
-        flex-basis: 20rem;
         flex-grow: 1;
     }
 
@@ -26,7 +25,9 @@
     }
 
     &-title {
-        font-size: var(--s2);
+        font-family: var(--font-family-body);
+        font-size: $font-size-large;
+        font-weight: bold;
         margin: 0;
     }
 
@@ -38,6 +39,11 @@
         font-size: $font-size-small;
         font-style: italic;
         color: var(--color-text-med)
+    }
+
+    &-description {
+        margin-bottom: auto;
+        font-size: $font-size-small;
     }
 
     &-tags {
@@ -57,8 +63,8 @@
 
     &-link {
         @extend .block-link;
-        font-size: $font-size-small;
-        padding: var(--s-3) var(--s0);
+        font-size: $font-size-xsmall;
+        padding: var(--s-3) var(--s-1);
         border-radius: 0;
         border: none;
         border-right: 1px solid var(--color-text);
