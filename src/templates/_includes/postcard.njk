@@ -4,9 +4,9 @@
     </div>
     <div class="postcard-info">
         <div class="postcard-info-inner">
-            <h3 class="postcard-title">{{ post.data.linkText }}</h3>
+            <h3 class="postcard-title">{{ post.data.title }}</h3>
             {# <time class="postcard-date">{{ post.data.postCreated | asPostDate }}</time> #}
-            <p class="postcard-description">{{ post.data.description }}</p>
+            <p class="postcard-description">{{ post.data.description | safe }}</p>
 
             {# {%- if (post.data.tags.length > 1) %}
             <div class="postcard-tags">tags: 

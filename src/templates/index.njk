@@ -19,7 +19,7 @@ stylesheets: [facehead.css]
         <a href="/about" class="home-section-link">About</a>
     </div>
 </section>
-<section class="home-section home-section-work">
+<section class="home-section home-section-work home-postcard-selection">
     <div class="home-section-inner">
         <h2 class="site-container-padded">Latest Work</h2>
         <div class="home-postcards">
@@ -35,5 +35,23 @@ stylesheets: [facehead.css]
     </div>
     <div class="home-section-link-wrap">
         <a href="/work" class="home-section-link">Work</a>
+    </div>
+</section>
+<section class="home-section home-section-lab home-postcard-selection">
+    <div class="home-section-inner">
+        <h2 class="site-container-padded">Latest from the Lab</h2>
+        <div class="home-postcards">
+            {%- set postlist = (collections.lab | sortByOrder(true)) %}
+            {%- set post = postlist[0] %}
+            {%- include "postcard.njk" %}
+            {%- set post = postlist[1] %}
+            {%- include "postcard.njk" %}
+            {%- set post = postlist[2] %}
+            {%- include "postcard.njk" %}
+            <div></div>
+        </div>
+    </div>
+    <div class="home-section-link-wrap">
+        <a href="/lab" class="home-section-link">Lab</a>
     </div>
 </section>

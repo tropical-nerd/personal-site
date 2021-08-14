@@ -8,6 +8,7 @@ linkText: Svelte REPL
 cover:
     src: ./src/images/fun-with-arrays_cover.png
     alt: Fun with Arrays
+description: A array visualizer live coded at <a href="http://frontendparty.com">#FrontEndParty</a>. Written with Svelte.
 tags: [ Svelte.js, Public Speaking ]
 scripts:
     - bundle.js

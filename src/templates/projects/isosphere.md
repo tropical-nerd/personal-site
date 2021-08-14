@@ -9,10 +9,11 @@ tags: [ Canvas Animation ]
 cover:
     src: ./src/images/isosphere_cover.png
     alt: Isosphere
+description: A canvas animation of a sphere rendered in isometric perspective.
 scripts:
     - /js/selectvid.js
     - /js/looper.js
 ---
-{% looper 'isosphere', 'An interactive canvas animation of a sphere rendered in isometric perspective.' %}
+{% looper 'isosphere', 'A canvas animation of a sphere rendered in isometric perspective.' %}
 
 Content coming very very soon!

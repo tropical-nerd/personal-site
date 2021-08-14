@@ -40,10 +40,10 @@
 
 .home-section-work {
     background-color: var(--color-background-2);
+}
 
-    .home-section-link-wrap {
-        margin-top: calc(var(--s3) - var(--s2));
-    }
+.home-postcard-selection .home-section-link-wrap {
+    margin-top: calc(var(--s3) - var(--s2));
 }
 
 .home-postcards {
