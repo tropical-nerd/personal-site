@@ -15,7 +15,7 @@ console.log("WARNING: Image srcsets are limited to streamline the build process.
 async function imageShortcode(shortcodeAttributes) {
   let metadata = await Image(shortcodeAttributes.src, {
       widths: shortcodeAttributes.widths || [480, 640], // 375, 800, 1024,  1280, 1440, 1600, 1920 
-      formats: ["jpeg"], //"avif", "webp", 
+      formats: ["webp", "jpeg"], //"avif", "webp", 
       outputDir: "./dist/images/",
       svgShortCircuit: true,
       urlPath: "/images/",

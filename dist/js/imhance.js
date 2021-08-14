@@ -71,7 +71,7 @@ function grow(imhance) {
     const windowAspect = windowHeight / windowWidth;  
     const mediaAspect = mediaHeight / mediaWidth;
 
-    // Choose to base window margins on smallest screen dimension
+    // Base window margins on smallest screen dimension
     let windowMargin, closeMargin;
     if (windowAspect <= 1) {
         windowMargin = .15 * windowHeight;
@@ -137,6 +137,10 @@ function grow(imhance) {
         imhance.close.setAttribute('style', `display: block; top: ${closeTop}px; opacity: 1;`);
         imhance.clickPlate.style.opacity = '.375';
     }, 20);
+
+    // Stop body scroll when open
+    document.body.style.position = 'fixed';
+    document.body.style.top = `-${window.scrollY}px`;
 }
 
 function shrink(imhance) {
@@ -176,6 +180,12 @@ function shrink(imhance) {
         imhance.figure.removeAttribute('style');
         imhance.clickPlate.setAttribute('style', 'display: none;');
     }, durationJS);
+
+    // Restore body scroll and maintain scroll location
+    const scrollY = document.body.style.top;
+    document.body.style.position = '';
+    document.body.style.top = '';
+    window.scrollTo(0, parseInt(scrollY || '0') * -1);
 }
 
 function toggleGrow(imhance) {
