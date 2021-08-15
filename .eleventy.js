@@ -9,13 +9,13 @@ const { config } = require("process");
 
 const looperSizes = [384, 480, 768, 960];
 
-// console.log("WARNING: Image srcsets are limited to streamline the build process.")
+console.log("WARNING: Image srcsets are limited to streamline the build process.")
 
 // Eleventy-Img
 async function imageShortcode(shortcodeAttributes) {
   let metadata = await Image(shortcodeAttributes.src, {
-      widths: shortcodeAttributes.widths || [375, 480, 640, 800, 1024,  1280, 1440, 1600, 1920], 
-      formats: ["avif", "webp", "jpeg"],
+      widths: shortcodeAttributes.widths || [375, 480, 640], //, 800, 1024, 1280, 1440, 1600, 1920
+      formats: ["webp", "jpeg"], //"avif", 
       outputDir: "./dist/images/",
       svgShortCircuit: true,
       urlPath: "/images/",
