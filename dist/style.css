@@ -145,7 +145,8 @@ body {
   flex-direction: column;
   max-width: 100vw;
   min-height: 100vh;
-  overflow-x: hidden; }
+  overflow-x: hidden;
+  overflow-y: scroll; }
 
 main {
   flex-grow: 1; }
@@ -505,7 +506,7 @@ dd {
   margin: 0 auto;
   padding-left: var(--body-padding);
   padding-bottom: var(--s2);
-  overflow-x: scroll; }
+  overflow-x: auto; }
 
 .postcard {
   display: flex;

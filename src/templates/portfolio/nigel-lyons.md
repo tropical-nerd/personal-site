@@ -14,7 +14,7 @@ cover:
     alt: nigelyons.video homepage
 description: Portfolio site for Nigel Lyons, an independent video producer in Washington, DC
 tags: [CSS Grid, Static Site, Node.js, Logo Design]
-scripts: [/js/imhance.js]
+# scripts: [/js/imhance.js]
 ---
 {% imgScroll src="./src/images/nigel-lyons_home.png", alt="Home page of nigelyons.video" %}
 

@@ -10,7 +10,7 @@ cover:
     src: ./src/images/sediment-press_cover.png
     alt: sedimentpress.com homepage
 tags: [WordPress, WooCommerce, Modified Theme, Logo Design]
-scripts: [/js/imhance.js]
+# scripts: [/js/imhance.js]
 ---
 {% imgScroll src="./src/images/sediment-press_home.png", alt="Full scrollable homepage of sedimentpress.com" %}
 

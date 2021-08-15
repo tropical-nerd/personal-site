@@ -10,7 +10,7 @@ cover:
     src: ./src/images/spruced_cover.png
     alt: spruced-dc.com homepage
 tags: [WordPress, Modified Theme]
-scripts: [/js/imhance.js]
+# scripts: [/js/imhance.js]
 ---
 {% imgScroll src="./src/images/spruced_home.png", alt="Full scrollable services page of spruced-dc.com" %}
 

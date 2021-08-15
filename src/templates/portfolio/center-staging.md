@@ -11,7 +11,7 @@ cover:
     alt: centerstaging.net homepage
 description: Website for Center Staging in New Orleans
 tags: [Wordpress, Custom Theme, Logo Design]
-scripts: [/js/imhance.js]
+# scripts: [/js/imhance.js]
 ---
 {% imgScroll src="./src/images/center-staging_home.png", alt="Full scrollable home page of centerstaging.net" %}
 
