@@ -1,21 +1,15 @@
 [ ] Remove slugs from navItems, use slug filter instead
 [ ] Add created-date to projects
-[ ] Change brand color to match resume
 [ ] Add projects with actual interactive js
-[ ] Change menu structure to Portfolio, Lab, About
-[ ] New home page design
+[1] Change page structure to Work, Lab, About
 [ ] Add About page
-[ ] Fix background scroll on imhance
-[ ] Gray out intructions on imhance/scroll
-[ ] Change highlight color to pink
-[ ] Restructure main nav
-[ ] Rewrite home page copy for full stack
+[2] Fix background scroll on imhance
 [ ] Stabilize hero on mobile with javascript
 [ ] Add deploy script
 [ ] Consider CSS Grid for blog layout
 [ ] Create a code graveyard?
-[ ] Get off Gulp completely?
 [ ] Add open graph card
 [ ] Auto generate post cards
 [ ] Fix hero text spacing and moving margins
 [ ] Reduce height of header?
+[ ] Add wiggle to home page
