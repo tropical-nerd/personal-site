@@ -80,4 +80,4 @@ gulp.task('serve', function() {
 });
 
 gulp.task('default', gulp.series('serve'));
-// gulp.task('build', gulp.parallel('root', 'favicons', 'fonts', 'jpg', 'webp', 'videos', 'pug', 'sass', 'js'));
+gulp.task('build', gulp.parallel('root', 'favicons', 'fonts', 'sass', 'svg', 'js', 'page-assets'));
