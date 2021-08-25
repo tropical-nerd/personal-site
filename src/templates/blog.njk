@@ -1,16 +1,12 @@
 ---
-title: Lab
-slug: lab
+title: Blog
+slug: blog
 layout: layouts/base.njk
-permalink: /lab/
+permalink: /blog/
 coverImageClass: postlist-cover
 templateClass: template-postlist
 tags: top
 order: 2
-eleventyNavigation:
-  key: lab
-  title: Lab
-  order: 2
 ---
 <article class="site-container-padded">
   <div class="post-heading">
@@ -18,6 +14,6 @@ eleventyNavigation:
     <p>The following are posts detailing personal web projects.</p>
   </div>
 
-  {% set postlist = (collections.lab | sortByOrder(true)) %}
+  {% set postlist = (collections.blog | sortByOrder(true)) %}
   {% include "postlist.njk" %}
 </article>
