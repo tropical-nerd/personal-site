@@ -10,7 +10,7 @@ cover:
     src: ./src/images/cdesigns-inc_cover.png
     alt: CDesigns, Inc. homepage
 tags: [WordPress, Modified Theme, Logo Design]
-scripts: [/js/imhance.js]
+# scripts: [/js/imhance.js]
 ---
 {% imgScroll src="./src/images/cdesigns-inc_home.png", alt="Full scrollable homepage of cdesignsinc.com" %}
 

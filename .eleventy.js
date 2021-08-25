@@ -14,8 +14,13 @@ console.log("WARNING: Image srcsets are limited to streamline the build process.
 // Eleventy-Img
 async function imageShortcode(shortcodeAttributes) {
   let metadata = await Image(shortcodeAttributes.src, {
+<<<<<<< HEAD
       widths: shortcodeAttributes.widths || [375, 480, 640], //, 800, 1024, 1280, 1440, 1600, 1920
       formats: ["webp", "jpeg"], //"avif", 
+=======
+      widths: shortcodeAttributes.widths || [375, 480, 640, 800], //, 1024,  1280, 1440, 1600, 1920 
+      formats: ["webp", "jpeg"], // "avif", 
+>>>>>>> fix-imhance
       outputDir: "./dist/images/",
       svgShortCircuit: true,
       urlPath: "/images/",

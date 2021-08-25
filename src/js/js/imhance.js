@@ -139,8 +139,8 @@ function grow(imhance) {
     }, 20);
 
     // Stop body scroll when open
-    document.body.style.position = 'fixed';
     document.body.style.top = `-${window.scrollY}px`;
+    document.body.style.position = 'fixed';
 }
 
 function shrink(imhance) {

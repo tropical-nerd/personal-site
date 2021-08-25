@@ -11,7 +11,7 @@ cover:
     alt: ravenpmg.com homepage
 description: Website for Raven, an event production company in New Orleans
 tags: [WordPress, Custom Theme]
-scripts: [/js/imhance.js]
+# scripts: [/js/imhance.js]
 ---
 {% imgScroll src="./src/images/raven-pmg_home.png", alt="Full scrollable homepage of ravenpmg.com" %}
 
